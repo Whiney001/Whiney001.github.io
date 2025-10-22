@@ -3,1087 +3,258 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Winnie Kenneth – Computer Science Student | AI & Data Engineering</title>
-  <meta name="description" content="Final-year Computer Science student specializing in AI, data engineering, and full-stack development. Available for graduate roles May 2026." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>Winnie Kenneth – Final Year Computer Science Student | AI & Software Engineer</title>
+  <meta name="description" content="Final-year Computer Science student specialising in AI, Data Engineering and full-stack development. Explore my projects, technical experience, and professional journey." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    :root{
-      --bg:#fdf8f6;
-      --bg-alt:#fff5f2;
-      --panel:#ffffff;
-      --panel-hover:#fff9f7;
-      --ink:#1a1a1a;
-      --muted:#6b6b6b;
-      --accent:#ff6b9d;
-      --accent-light:#ffb3d1;
-      --accent-dark:#e5527e;
-      --accent-2:#6366f1;
-      --purple:#a855f7;
-      --orange:#ff8c42;
-      --success:#10b981;
-      --border:#ffe4ee;
-      --shadow:0 10px 30px rgba(255,107,157,.15);
-      --shadow-lg:0 20px 50px rgba(255,107,157,.2);
-      --radius:16px;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    html,body{height:100%}
-    body{
-      font-family:Inter,sans-serif;
-      background:var(--bg);
-      color:var(--ink);
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-      overflow-x:hidden;
-    }
-    
-    body::before{
-      content:'';
-      position:fixed;
-      inset:0;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(255,107,157,.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(99,102,241,.06) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(255,140,66,.04) 0%, transparent 60%);
-      pointer-events:none;
-      animation:float-bg 15s ease-in-out infinite;
-      z-index:0;
-    }
-    @keyframes float-bg{
-      0%, 100%{opacity:.6}
-      50%{opacity:1}
-    }
-    
-    a{color:var(--accent);text-decoration:none;transition:all .3s ease}
-    a:hover{color:var(--accent-dark)}
-
-    .header{
-      position:fixed;
-      inset:0 0 auto 0;
-      height:70px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      z-index:100;
-      backdrop-filter:blur(20px);
-      border-bottom:1px solid var(--border);
-      background:rgba(253,248,246,.95);
-    }
-    .nav{
-      width:min(1200px,94%);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:.6rem;
-      font-weight:900;
-      font-size:1.1rem;
-      letter-spacing:.5px;
-      color:var(--ink);
-    }
-    .brand .dot{
-      width:12px;
-      height:12px;
-      border-radius:50%;
-      background:linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow:0 0 15px rgba(255,107,157,.4);
-      animation:float-dot 3s ease-in-out infinite;
-    }
-    @keyframes float-dot{
-      0%, 100%{transform:translateY(0)}
-      50%{transform:translateY(-4px)}
-    }
-    .links{display:flex;gap:2rem}
-    .links a{
-      font-weight:600;
-      font-size:.95rem;
-      color:var(--muted);
-      position:relative;
-      transition:color .3s;
-    }
-    .links a:hover{color:var(--accent)}
-    .links a::after{
-      content:'';
-      position:absolute;
-      bottom:-4px;
-      left:0;
-      width:0;
-      height:2px;
-      background:linear-gradient(90deg, var(--accent), var(--accent-2));
-      transition:width .3s;
-    }
-    .links a:hover::after{width:100%}
-
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      padding:100px 0 60px;
-      position:relative;
-      z-index:1;
-    }
-    .hero .wrap{
-      width:min(1200px,94%);
-      margin:0 auto;
-      display:grid;
-      grid-template-columns:1.3fr .7fr;
-      gap:4rem;
-      align-items:center;
-    }
-    .tag{
-      display:inline-flex;
-      align-items:center;
-      gap:.6rem;
-      padding:.5rem 1rem;
-      border:2px solid var(--border);
-      border-radius:999px;
-      background:linear-gradient(135deg, rgba(255,107,157,.08), rgba(99,102,241,.06));
-      font-weight:700;
-      font-size:.85rem;
-      margin-bottom:1.5rem;
-      color:var(--ink);
-    }
-    .spark{
-      width:8px;
-      height:8px;
-      border-radius:50%;
-      background:var(--accent);
-      box-shadow:0 0 12px var(--accent);
-      animation:pulse-spark 2s ease-in-out infinite;
-    }
-    @keyframes pulse-spark{
-      0%, 100%{opacity:1;transform:scale(1)}
-      50%{opacity:.7;transform:scale(.9)}
-    }
-    .hero h1{
-      font-size:clamp(2.2rem, 5vw, 4.5rem);
-      line-height:1.1;
-      margin-bottom:1rem;
-      font-weight:900;
-      background:linear-gradient(135deg, var(--ink), var(--muted));
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      background-clip:text;
-    }
-    .hero .subtitle{
-      font-size:1.3rem;
-      color:var(--accent);
-      font-weight:700;
-      margin-bottom:.8rem;
-    }
-    .hero p{
-      color:var(--muted);
-      font-size:1.1rem;
-      max-width:60ch;
-      margin-bottom:2rem;
-    }
-    .cta{display:flex;gap:1rem;flex-wrap:wrap}
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:.7rem;
-      padding:1rem 1.8rem;
-      border-radius:12px;
-      font-weight:700;
-      font-size:1rem;
-      border:2px solid transparent;
-      transition:all .3s ease;
-      cursor:pointer;
-    }
-    .btn.primary{
-      background:linear-gradient(135deg, var(--accent), var(--accent-dark));
-      color:#fff;
-      box-shadow:0 8px 20px rgba(255,107,157,.25);
-    }
-    .btn.primary:hover{
-      transform:translateY(-3px);
-      box-shadow:0 12px 30px rgba(255,107,157,.35);
-    }
-    .btn.secondary{
-      background:var(--panel);
-      border-color:var(--border);
-      color:var(--accent);
-    }
-    .btn.secondary:hover{
-      background:var(--panel-hover);
-      border-color:var(--accent);
-      transform:translateY(-2px);
+    :root {
+      --bg: #fdf8f6;
+      --panel: #ffffff;
+      --ink: #1a1a1a;
+      --muted: #6b6b6b;
+      --accent: #ff6b9d;
     }
 
-    .orb-card{
-      position:relative;
-      width:100%;
-      aspect-ratio:1;
-      border-radius:50%;
-      background:linear-gradient(135deg, rgba(255,107,157,.15), rgba(99,102,241,.12));
-      border:3px solid rgba(255,255,255,.8);
-      box-shadow:var(--shadow-lg);
-      backdrop-filter:blur(10px);
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      gap:1.5rem;
-      animation:float-orb 4s ease-in-out infinite;
-      padding:2rem;
-    }
-    @keyframes float-orb{
-      0%, 100%{transform:translateY(0px) rotate(0deg)}
-      50%{transform:translateY(-20px) rotate(5deg)}
-    }
-    .orb-stats{
-      display:grid;
-      gap:1rem;
-      text-align:center;
-      width:100%;
-    }
-    .stat-item{
-      background:rgba(255,255,255,.9);
-      border-radius:12px;
-      padding:1rem;
-      box-shadow:0 4px 15px rgba(255,107,157,.1);
-    }
-    .stat-num{
-      font-size:2rem;
-      font-weight:900;
-      background:linear-gradient(135deg, var(--accent), var(--accent-2));
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-      background-clip:text;
-      line-height:1;
-    }
-    .stat-label{
-      font-size:.85rem;
-      color:var(--muted);
-      margin-top:.4rem;
-      font-weight:600;
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      margin: 0;
+      padding: 0;
     }
 
-    section{
-      padding:5rem 0;
-      position:relative;
-      z-index:1;
-    }
-    .container{
-      width:min(1200px,94%);
-      margin:0 auto;
-    }
-    .section-h{
-      text-align:center;
-      margin-bottom:3rem;
-    }
-    .section-h h2{
-      font-size:clamp(2rem, 4vw, 3rem);
-      margin-bottom:.8rem;
-      font-weight:900;
-    }
-    .section-h p{
-      color:var(--muted);
-      font-size:1.1rem;
-      max-width:60ch;
-      margin:0 auto;
+    header {
+      background: linear-gradient(135deg, #ff6b9d, #e5527e);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
     }
 
-    .skills-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-      gap:2rem;
-    }
-    .panel{
-      background:var(--panel);
-      border:2px solid var(--border);
-      border-radius:var(--radius);
-      padding:2rem;
-      transition:all .3s ease;
-    }
-    .panel:hover{
-      background:var(--panel-hover);
-      border-color:var(--accent-light);
-      transform:translateY(-5px);
-      box-shadow:var(--shadow);
-    }
-    .panel h3{
-      display:flex;
-      align-items:center;
-      gap:.8rem;
-      font-size:1.4rem;
-      margin-bottom:1.2rem;
-      color:var(--ink);
-    }
-    .panel h3 i{
-      width:40px;
-      height:40px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:10px;
-      background:linear-gradient(135deg, var(--accent-light), var(--accent));
-      color:#fff;
-      font-size:1.1rem;
-    }
-    .panel ul{
-      list-style:none;
-      display:flex;
-      flex-direction:column;
-      gap:.7rem;
-    }
-    .panel li{
-      display:flex;
-      align-items:center;
-      gap:.6rem;
-      color:var(--muted);
-      font-weight:500;
-    }
-    .panel li::before{
-      content:'▸';
-      color:var(--accent);
-      font-weight:900;
+    header h1 {
+      font-size: 2.3rem;
+      margin-bottom: 0.5rem;
     }
 
-    .xp-list{display:flex;flex-direction:column;gap:2.5rem}
-    .xp{
-      background:var(--panel);
-      border:2px solid var(--border);
-      border-radius:var(--radius);
-      padding:2rem;
-      transition:all .3s ease;
-      position:relative;
-      overflow:hidden;
-    }
-    .xp::before{
-      content:'';
-      position:absolute;
-      top:0;
-      left:0;
-      width:5px;
-      height:100%;
-      background:linear-gradient(180deg, var(--accent), var(--accent-2));
-    }
-    .xp:hover{
-      background:var(--panel-hover);
-      border-color:var(--accent-light);
-      transform:translateX(8px);
-      box-shadow:var(--shadow);
-    }
-    .xp-header{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      margin-bottom:1rem;
-      gap:1rem;
-      flex-wrap:wrap;
-    }
-    .xp-title{
-      flex:1;
-      min-width:250px;
-    }
-    .xp-title h3{
-      font-size:1.4rem;
-      margin-bottom:.4rem;
-      color:var(--ink);
-    }
-    .xp-title .company{
-      color:var(--accent);
-      font-weight:700;
-      font-size:1.05rem;
-    }
-    .xp-meta{
-      display:flex;
-      gap:1rem;
-      flex-wrap:wrap;
-    }
-    .badge{
-      padding:.4rem .9rem;
-      border-radius:8px;
-      font-size:.85rem;
-      font-weight:700;
-      background:linear-gradient(135deg, rgba(255,107,157,.15), rgba(99,102,241,.12));
-      color:var(--accent-dark);
-      border:1px solid var(--border);
-    }
-    .xp ul{
-      list-style:none;
-      display:flex;
-      flex-direction:column;
-      gap:.8rem;
-    }
-    .xp li{
-      display:flex;
-      gap:.8rem;
-      color:var(--muted);
-      line-height:1.7;
-    }
-    .xp li::before{
-      content:'→';
-      color:var(--accent);
-      font-weight:900;
-      flex-shrink:0;
+    header p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
-    .project-grid{display:flex;flex-direction:column;gap:3rem}
-    .project-card{
-      background:var(--panel);
-      border:2px solid var(--border);
-      border-radius:var(--radius);
-      padding:2.5rem;
-      transition:all .3s ease;
-    }
-    .project-card:hover{
-      border-color:var(--accent-light);
-      box-shadow:var(--shadow-lg);
-      transform:translateY(-5px);
-    }
-    .project-header{
-      margin-bottom:2rem;
-      padding-bottom:1.5rem;
-      border-bottom:2px solid var(--border);
-    }
-    .project-header h3{
-      font-size:1.8rem;
-      margin-bottom:.8rem;
-      color:var(--ink);
-    }
-    .project-header p{
-      color:var(--muted);
-      font-size:1.05rem;
-      line-height:1.7;
-    }
-    .meta-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-      gap:1.5rem;
-      margin-bottom:2rem;
-    }
-    .meta h5{
-      font-size:.85rem;
-      text-transform:uppercase;
-      letter-spacing:.5px;
-      color:var(--accent);
-      margin-bottom:.5rem;
-      font-weight:800;
-    }
-    .meta div{
-      color:var(--muted);
-      font-weight:600;
-      line-height:1.6;
-    }
-    .project-details{
-      display:flex;
-      flex-direction:column;
-      gap:2rem;
-    }
-    .detail-section h5{
-      display:flex;
-      align-items:center;
-      gap:.7rem;
-      font-size:1.1rem;
-      margin-bottom:1rem;
-      color:var(--ink);
-    }
-    .detail-section h5 i{
-      color:var(--accent);
-      font-size:1.2rem;
-    }
-    .detail-section ul{
-      list-style:none;
-      display:flex;
-      flex-direction:column;
-      gap:.9rem;
-    }
-    .detail-section li{
-      display:flex;
-      gap:.8rem;
-      color:var(--muted);
-      line-height:1.7;
-    }
-    .detail-section li::before{
-      content:'✓';
-      color:var(--success);
-      font-weight:900;
-      flex-shrink:0;
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    .contact-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-      gap:2rem;
-    }
-    .contact-card{
-      background:var(--panel);
-      border:2px solid var(--border);
-      border-radius:var(--radius);
-      padding:2rem;
-      display:flex;
-      align-items:center;
-      gap:1.5rem;
-      transition:all .3s ease;
-    }
-    .contact-card:hover{
-      background:var(--panel-hover);
-      border-color:var(--accent-light);
-      transform:translateY(-5px);
-      box-shadow:var(--shadow);
-    }
-    .contact-icon{
-      width:60px;
-      height:60px;
-      border-radius:12px;
-      background:linear-gradient(135deg, var(--accent-light), var(--accent));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex-shrink:0;
-    }
-    .contact-icon i{
-      font-size:1.8rem;
-      color:#fff;
-    }
-    .contact-info{
-      flex:1;
-      min-width:0;
-    }
-    .contact-label{
-      font-size:.85rem;
-      text-transform:uppercase;
-      letter-spacing:.5px;
-      color:var(--muted);
-      margin-bottom:.4rem;
-      font-weight:700;
-    }
-    .contact-value{
-      font-weight:600;
-      color:var(--ink);
-      word-break:break-word;
-    }
-    .contact-value a{
-      color:var(--accent);
-      transition:color .3s;
-    }
-    .contact-value a:hover{
-      color:var(--accent-dark);
+    h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
     }
 
-    footer{
-      padding:2rem 0;
-      text-align:center;
-      color:var(--muted);
-      border-top:2px solid var(--border);
-      background:var(--bg-alt);
-      position:relative;
-      z-index:1;
+    .project-card {
+      background: var(--panel);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
     }
 
-    @media (max-width: 768px) {
-      .hero .wrap{
-        grid-template-columns:1fr;
-        gap:2rem;
-      }
-      .orb-card{
-        max-width:350px;
-        margin:0 auto;
-      }
-      .links{
-        gap:1rem;
-      }
-      .xp-header{
-        flex-direction:column;
-      }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .meta h5 {
+      margin: 0.3rem 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .detail-section h5 {
+      color: var(--accent);
+      margin-top: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .cta a {
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 0.6rem 1.3rem;
+      border-radius: 8px;
+      margin-right: 0.6rem;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.2s;
+    }
+
+    .cta a:hover {
+      background: #e5527e;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
-      <div class="brand">
-        <div class="dot"></div>
-        WINNIE KENNETH
-      </div>
-      <div class="links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="https://github.com/Whiney001" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-      </div>
-    </nav>
+
+  <header>
+    <h1>Winnie Kenneth</h1>
+    <p>Final-Year Computer Science Student | AI, Data & Software Engineer | Passionate about AI-powered solutions and digital innovation.</p>
   </header>
 
-  <section class="hero">
-    <div class="wrap">
-      <div>
-        <div class="tag">
-          <div class="spark"></div>
-          Final-Year Computer Science Student
-        </div>
-        <h1>Seeking graduate roles in Data Engineering, Machine Learning, and Software Development</h1>
-        <div class="subtitle">Building intelligent data solutions and scalable AI applications</div>
-        <p>
-          Third-year Computer Science student with hands-on experience in data engineering, machine learning, and full-stack development. Passionate about transforming data into actionable insights and building production-ready AI systems. Available for graduate roles starting May 2026.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="#projects">
-            <i class="fas fa-rocket"></i> View Projects
-          </a>
-          <a class="btn secondary" href="#contact">
-            <i class="fas fa-envelope"></i> Get In Touch
-          </a>
-        </div>
-      </div>
-      <div>
-        <div class="orb-card">
-          <div class="orb-stats">
-            <div class="stat-item">
-              <div class="stat-num">2026</div>
-              <div class="stat-label">Graduating May</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-num">1</div>
-              <div class="stat-label">Live Demo</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-num">3</div>
-              <div class="stat-label">Projects</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a final-year Computer Science student at the University of Hull (graduating July 2026, predicted 2:1), specialising in Artificial Intelligence, Machine Learning, and Software Development. 
+      I build intelligent applications that solve real-world problems — from AI document assistants to smart delivery routing systems. 
+      I’m actively seeking graduate opportunities in <strong>AI Engineering, Data Science, or Software Development</strong>.
+    </p>
   </section>
 
-  <section id="about">
-    <div class="container">
-      <div class="section-h">
-        <h2>About Me</h2>
-        <p>I'm a final-year Computer Science student at the University of Hull, specializing in data engineering, machine learning, and cloud technologies.</p>
+  <section id="projects">
+    <h2>Featured Projects</h2>
+
+    <!-- 🧠 PROJECT 1: AI Document Assistant -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>AI-Powered Document Assistant (RAG Application)</h3>
+        <p>Interactive chatbot that allows users to upload PDFs and ask natural-language questions — powered by Retrieval-Augmented Generation (RAG).</p>
       </div>
-      <div class="panel" style="max-width:900px; margin:2rem auto 0;">
-        <p style="color:var(--muted); line-height:1.8; margin-bottom:1.5rem;">
-          <strong style="color:var(--accent);">Technical Background:</strong> Demonstrated expertise in Python, SQL, and cloud platforms (AWS, Azure) with strong capabilities in data modeling, ETL processes, and implementing data quality controls. I've built projects ranging from AI-powered document assistants to predictive models for smart city logistics.
-        </p>
-        <p style="color:var(--muted); line-height:1.8; margin-bottom:1.5rem;">
-          My coursework includes Artificial Intelligence (Q-Learning, Neural Networks, Reinforcement Learning), Database Systems, Machine Learning, and Cloud Architecture. Technical projects include gesture control systems, recruitment analytics, and database API development.
-        </p>
-        <p style="color:var(--muted); line-height:1.8;">
-          I thrive in collaborative environments and am eager to contribute to organizations working on data-driven innovation and AI solutions. Currently seeking graduate opportunities where I can apply my technical skills while continuing to learn and grow.
-        </p>
+
+      <div class="meta-grid">
+        <div class="meta">
+          <h5>Objective</h5>
+          <div>Automate document understanding through intelligent question-answering.</div>
+        </div>
+        <div class="meta">
+          <h5>Timeline</h5>
+          <div>2-Week Development Sprint</div>
+        </div>
+        <div class="meta">
+          <h5>Role</h5>
+          <div>Full-Stack AI Developer</div>
+        </div>
+        <div class="meta">
+          <h5>Tech Stack</h5>
+          <div>Python, LangChain, OpenAI API, Streamlit, ChromaDB, PyPDF</div>
+        </div>
       </div>
+
+      <div class="project-details">
+        <div class="detail-section">
+          <h5><i class="fas fa-robot"></i> What It Does</h5>
+          <ul>
+            <li>Uploads and reads PDFs, splitting text into semantic chunks for context retrieval.</li>
+            <li>Embeds document data using OpenAI embeddings and stores them in a vector database.</li>
+            <li>Uses GPT-3.5-turbo to generate accurate, context-aware answers.</li>
+            <li>Deployed on Streamlit Cloud for recruiters to test live — no setup required.</li>
+          </ul>
+        </div>
+
+        <div class="detail-section">
+          <h5><i class="fas fa-lightbulb"></i> Real-World Applications</h5>
+          <ul>
+            <li>Legal contract analysis and HR document review.</li>
+            <li>Academic research summarisation and topic extraction.</li>
+            <li>Compliance or business report search automation.</li>
+          </ul>
+        </div>
+
+        <div class="detail-section">
+          <h5><i class="fas fa-trophy"></i> Achievements</h5>
+          <ul>
+            <li>Completed a fully functional RAG pipeline and live web app deployment in 2 weeks.</li>
+            <li>Integrated multiple AI tools — embeddings, retrieval, and LLM inference.</li>
+            <li>Demonstrated end-to-end ability to build and deploy AI applications.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cta" style="margin-top:1.5rem;">
+        <a href="https://ai-document-assistant-gp7m7sxngzpyfxt46wjnnc.streamlit.app" target="_blank" rel="noopener">
+          <i class="fas fa-globe"></i> Live Demo
+        </a>
+        <a href="https://github.com/whiney001/ai-document-assistant" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+    </div>
+
+    <!-- You can keep your other projects below -->
+    <!-- Example placeholder for Smart Delivery or LightHR projects -->
+  </section>
+
+  <section id="experience">
+    <h2>Work Experience</h2>
+
+    <div class="project-card">
+      <h3>Eagles Wing Limited (Remote)</h3>
+      <p><strong>Role:</strong> Junior Tech Assistant | <em>Oct 2024 – Jun 2025</em></p>
+      <ul>
+        <li>Collaborated with a small tech team to improve website backend performance and manage CMS integrations.</li>
+        <li>Assisted in automating file management workflows and deploying small internal tools using Python and SQL.</li>
+        <li>Supported digital transformation initiatives and helped troubleshoot user interface issues across client systems.</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h3>Step Recruitment – Digital Transformation Internship</h3>
+      <p><strong>Role:</strong> Technical Intern | <em>Jul 2025 – Sept 2025</em></p>
+      <ul>
+        <li>Worked with an entertainment company to maintain and enhance its website and analytics dashboard.</li>
+        <li>Implemented minor site automation tasks and optimised database performance for event updates.</li>
+        <li>Gained commercial experience collaborating with clients and reporting progress to the project lead.</li>
+      </ul>
     </div>
   </section>
 
   <section id="skills">
-    <div class="container">
-      <div class="section-h">
-        <h2>Technical Skills</h2>
-        <p>Comprehensive skill set across data engineering, AI/ML, and software development</p>
-      </div>
-      <div class="skills-grid">
-        <div class="panel">
-          <h3>
-            <i class="fas fa-database"></i>
-            Data Engineering
-          </h3>
-          <ul>
-            <li>Python (Pandas, NumPy)</li>
-            <li>SQL (MySQL, PostgreSQL, MongoDB)</li>
-            <li>ETL Pipeline Development</li>
-            <li>Data Modeling & Normalization</li>
-            <li>Data Quality Controls</li>
-            <li>Database Design (3NF, Indexing)</li>
-          </ul>
-        </div>
-
-        <div class="panel">
-          <h3>
-            <i class="fas fa-brain"></i>
-            AI & Machine Learning
-          </h3>
-          <ul>
-            <li>scikit-learn, XGBoost</li>
-            <li>TensorFlow, PyTorch</li>
-            <li>Neural Networks</li>
-            <li>LangChain & OpenAI API</li>
-            <li>Reinforcement Learning (Q-learning)</li>
-            <li>Feature Engineering</li>
-          </ul>
-        </div>
-
-        <div class="panel">
-          <h3>
-            <i class="fas fa-code"></i>
-            Software Development
-          </h3>
-          <ul>
-            <li>Python, C#, JavaScript</li>
-            <li>Flask, REST APIs</li>
-            <li>Git Version Control</li>
-            <li>Test-Driven Development</li>
-            <li>Agile Methodologies</li>
-            <li>Object-Oriented Programming</li>
-          </ul>
-        </div>
-
-        <div class="panel">
-          <h3>
-            <i class="fas fa-cloud"></i>
-            Cloud & DevOps
-          </h3>
-          <ul>
-            <li>AWS & Microsoft Azure</li>
-            <li>Docker Basics</li>
-            <li>CI/CD Concepts</li>
-            <li>Cloud Architecture</li>
-            <li>Deployment & Monitoring</li>
-            <li>Linux/Ubuntu</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" style="background:var(--bg-alt)">
-    <div class="container">
-      <div class="section-h">
-        <h2>Professional Experience</h2>
-        <p>Building practical skills through diverse professional roles</p>
-      </div>
-      <div class="xp-list">
-        <div class="xp">
-          <div class="xp-header">
-            <div class="xp-title">
-              <h3>Marketing Intern</h3>
-              <div class="company">Eagles Wing Limited</div>
-            </div>
-            <div class="xp-meta">
-              <span class="badge"><i class="fas fa-map-marker-alt"></i> Remote</span>
-              <span class="badge"><i class="fas fa-calendar"></i> Mar 2024 – Aug 2024</span>
-            </div>
-          </div>
-          <ul>
-            <li>Built weekly data reporting pipeline delivering performance metrics with visualizations using Excel and Google Analytics</li>
-            <li>Collected, processed, and transformed raw marketing data into structured datasets for stakeholder consumption</li>
-            <li>Managed digital content strategy based on data-driven insights, contributing to measurable increases in online engagement</li>
-            <li>Coordinated cross-functional teams ensuring data accuracy and consistency across marketing campaigns</li>
-            <li>Demonstrated ability to build data solutions that support business operations and decision-making</li>
-          </ul>
-        </div>
-
-        <div class="xp">
-          <div class="xp-header">
-            <div class="xp-title">
-              <h3>Crew Member</h3>
-              <div class="company">McDonald's</div>
-            </div>
-            <div class="xp-meta">
-              <span class="badge"><i class="fas fa-map-marker-alt"></i> Hull, UK</span>
-              <span class="badge"><i class="fas fa-calendar"></i> Apr 2023 – Jan 2025</span>
-            </div>
-          </div>
-          <ul>
-            <li>Maintained operational efficiency and quality control during high-pressure periods in fast-paced environment</li>
-            <li>Collaborated with team members to ensure smooth operations during peak hours, demonstrating strong teamwork</li>
-            <li>Adapted quickly to changing priorities and maintained strict quality standards under pressure</li>
-            <li>Awarded "Star of the Shift" for outstanding performance and reliability</li>
-            <li>Developed strong work ethic and attention to detail essential for data quality and system reliability</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <div class="section-h">
-        <h2>Featured Projects</h2>
-        <p>Showcasing technical expertise through practical application development</p>
-      </div>
-      <div class="project-grid">
-
-      <!-- Project 1: RAG Document Assistant -->
-      <div class="project-card">
-        <div class="project-header">
-          <h3>AI-Powered Document Assistant (RAG Application) ⚡ LIVE</h3>
-          <p>Production-ready chatbot using Retrieval-Augmented Generation to answer questions about uploaded documents instantly. Deployed on Streamlit Cloud with live demo available.</p>
-        </div>
-
-        <div class="meta-grid">
-          <div class="meta">
-            <h5>Tech Stack</h5>
-            <div>Python, LangChain, OpenAI API, Streamlit, ChromaDB, PyPDF</div>
-          </div>
-          <div class="meta">
-            <h5>Timeline</h5>
-            <div>2-week development sprint</div>
-          </div>
-          <div class="meta">
-            <h5>Status</h5>
-            <div>Deployed & Functional</div>
-          </div>
-        </div>
-
-        <div class="project-details">
-          <div class="detail-section">
-            <h5><i class="fas fa-cogs"></i> Technical Implementation</h5>
-            <ul>
-              <li>Built document ingestion pipeline processing PDFs into 1000-token chunks with 200-token overlap using LangChain</li>
-              <li>Implemented semantic search using OpenAI embeddings and ChromaDB vector database for efficient retrieval</li>
-              <li>Integrated GPT-3.5-turbo for context-aware answer generation with temperature=0 for consistency</li>
-              <li>Created clean Streamlit interface with real-time processing feedback and comprehensive error handling</li>
-              <li>Designed retriever with k=3 top results to balance answer quality with context window limits</li>
-            </ul>
-          </div>
-
-          <div class="detail-section">
-            <h5><i class="fas fa-lightbulb"></i> Key Features & Business Value</h5>
-            <ul>
-              <li>Enables instant Q&A on uploaded documents without manual reading or searching</li>
-              <li>Real-world applications: Legal contract analysis, HR policy queries, research paper summarization</li>
-              <li>Built end-to-end: data processing, AI integration, user interface, and deployment</li>
-              <li>Demonstrates practical AI integration skills highly sought after by UK tech employers</li>
-              <li>Shows ability to ship production-ready AI applications, not just academic projects</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="cta" style="margin-top:2rem">
-          <a class="btn primary" href="https://ai-document-assistant-s9vpplr5ywypbzugydvt2q.streamlit.app" target="_blank" rel="noopener">
-            <i class="fas fa-rocket"></i> Live Demo
-          </a>
-          <a class="btn secondary" href="https://github.com/Whiney001/ai-document-assistant" target="_blank" rel="noopener">
-            <i class="fab fa-github"></i> View Code
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 2: Smart City -->
-      <div class="project-card">
-        <div class="project-header">
-          <h3>Smart City Logistics Optimization</h3>
-          <p>Machine learning pipeline integrating multiple data sources for delivery cost prediction and route optimization</p>
-        </div>
-
-        <div class="meta-grid">
-          <div class="meta">
-            <h5>Tech Stack</h5>
-            <div>Python, scikit-learn, Pandas, NumPy, Matplotlib</div>
-          </div>
-          <div class="meta">
-            <h5>Timeline</h5>
-            <div>November 2024</div>
-          </div>
-          <div class="meta">
-            <h5>Focus Area</h5>
-            <div>ML & Algorithm Development</div>
-          </div>
-        </div>
-
-        <div class="project-details">
-          <div class="detail-section">
-            <h5><i class="fas fa-tasks"></i> Data Engineering & ML Pipeline</h5>
-            <ul>
-              <li>Built data transformation pipeline integrating multiple sources into unified dataset for analysis</li>
-              <li>Implemented data preprocessing handling 10+ features including traffic, terrain, and weather patterns</li>
-              <li>Developed and compared multiple ML models (Polynomial Regression, Neural Networks) for cost forecasting</li>
-              <li>Created comprehensive evaluation framework using MAE, MSE, and RMSE metrics</li>
-            </ul>
-          </div>
-
-          <div class="detail-section">
-            <h5><i class="fas fa-brain"></i> Algorithm Implementation & Results</h5>
-            <ul>
-              <li>Implemented Q-learning reinforcement learning algorithm for autonomous navigation</li>
-              <li>Compared multiple pathfinding algorithms (BFS, DFS, Dijkstra, A*) through systematic analysis</li>
-              <li>Created data visualizations to communicate technical findings to stakeholders</li>
-              <li>Successfully integrated data pipeline with intelligent route planning algorithms</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="cta" style="margin-top:2rem">
-          <a class="btn primary" href="https://github.com/Whiney001/AI-Delivery-Route-Optimizer" target="_blank" rel="noopener">
-            <i class="fab fa-github"></i> View on GitHub
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 3: Student Wellbeing App -->
-      <div class="project-card">
-        <div class="project-header">
-          <h3>Student Wellbeing Management Platform</h3>
-          <p>Enterprise web application for educational institutions with role-based access control and comprehensive wellbeing tracking</p>
-        </div>
-
-        <div class="meta-grid">
-          <div class="meta">
-            <h5>Tech Stack</h5>
-            <div>C#, ASP.NET Core, Entity Framework, xUnit, GitHub Actions, HTML/CSS/JS</div>
-          </div>
-          <div class="meta">
-            <h5>Timeline</h5>
-            <div>12-week full SDLC</div>
-          </div>
-          <div class="meta">
-            <h5>Focus Area</h5>
-            <div>Full-Stack Development & Testing</div>
-          </div>
-        </div>
-
-        <div class="project-details">
-          <div class="detail-section">
-            <h5><i class="fas fa-code"></i> Software Engineering & Architecture</h5>
-            <ul>
-              <li>Implemented multi-tier architecture with clear separation: Presentation (Razor Pages), Business Logic, Data Access (EF Core)</li>
-              <li>Designed relational database schema with normalized tables, foreign key relationships, and indexing</li>
-              <li>Built role-based authentication system supporting three user types with distinct permission levels</li>
-              <li>Developed RESTful API endpoints for CRUD operations on wellbeing records and appointments</li>
-              <li>Applied object-oriented principles including inheritance, encapsulation, polymorphism, and SOLID patterns</li>
-            </ul>
-          </div>
-
-          <div class="detail-section">
-            <h5><i class="fas fa-vial"></i> Testing & Quality Assurance</h5>
-            <ul>
-              <li>Designed comprehensive test plan with unit tests, integration tests, and system tests mapped to requirements</li>
-              <li>Implemented automated test suite using xUnit framework achieving 85%+ code coverage</li>
-              <li>Built continuous integration pipeline using GitHub Actions for automated build and test execution</li>
-              <li>Created traceability matrix ensuring every requirement has corresponding test cases</li>
-            </ul>
-          </div>
-
-          <div class="detail-section">
-            <h5><i class="fas fa-users-cog"></i> Key Features</h5>
-            <ul>
-              <li>Administrator dashboard with analytics showing wellbeing trends and appointment statistics</li>
-              <li>Tutor interface for managing student appointments and viewing wellbeing reports</li>
-              <li>Student portal for booking appointments and tracking mood over time with data visualization</li>
-              <li>Self-reporting system allowing students to track wellbeing metrics with historical analysis</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="cta" style="margin-top:2rem">
-          <a class="btn primary" href="https://github.com/Whiney001/Student-Wellbeing-UI" target="_blank" rel="noopener">
-            <i class="fab fa-github"></i> View on GitHub
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <div class="section-h">
-        <h2>Let's Connect</h2>
-        <p>Open to graduate opportunities in Data Engineering, AI/ML, and Software Development · Available May 2026</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="contact-info">
-            <div class="contact-label">Email</div>
-            <div class="contact-value">
-              <a href="mailto:kennethwinniefred746@gmail.com">kennethwinniefred746@gmail.com</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fab fa-github"></i>
-          </div>
-          <div class="contact-info">
-            <div class="contact-label">GitHub</div>
-            <div class="contact-value">
-              <a href="https://github.com/Whiney001" target="_blank" rel="noopener">github.com/Whiney001</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fab fa-linkedin"></i>
-          </div>
-          <div class="contact-info">
-            <div class="contact-label">LinkedIn</div>
-            <div class="contact-value">
-              <a href="https://linkedin.com/in/winnie-kenneth-28a862287" target="_blank" rel="noopener">linkedin.com/in/winnie-kenneth-28a862287</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div class="contact-info">
-            <div class="contact-label">Location</div>
-            <div class="contact-value">
-              Hull, UK · Open to relocation
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>Programming:</strong> Python, SQL, C#, JavaScript</li>
+      <li><strong>Frameworks & Tools:</strong> LangChain, Streamlit, Flask, Docker, Power BI, Azure</li>
+      <li><strong>Data & AI:</strong> Machine Learning, Data Engineering, RAG, NLP</li>
+      <li><strong>Soft Skills:</strong> Communication, Team Collaboration, Analytical Thinking, Leadership</li>
+    </ul>
   </section>
 
   <footer>
-    © 2025 Winnie Kenneth · BSc Computer Science (University of Hull) · Graduating May 2026
+    <p>© 2025 Winnie Kenneth | Final-Year BSc Computer Science Student – University of Hull</p>
+    <p>
+      <a href="mailto:kennethwinniefred746@gmail.com"><i class="fas fa-envelope"></i> kennethwinniefred746@gmail.com</a> | 
+      <a href="https://linkedin.com/in/winnie-kenneth-28a862287" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> | 
+      <a href="https://github.com/whiney001" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </p>
   </footer>
 
-  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from('.hero .wrap > div:first-child', {
-      opacity: 0,
-      y: 30,
-      duration: 1,
-      ease: 'power3.out'
-    });
-
-    gsap.from('.orb-card', {
-      opacity: 0,
-      scale: 0.8,
-      duration: 1,
-      delay: 0.3,
-      ease: 'back.out(1.7)'
-    });
-
-    gsap.utils.toArray('.panel, .xp, .project-card, .contact-card, .stat-item').forEach((el, i) => {
-      gsap.from(el, {
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 85%',
-          toggleActions: 'play none none none'
-        },
-        opacity: 0,
-        y: 30,
-        duration: 0.6,
-        delay: i * 0.1,
-        ease: 'power2.out'
-      });
-    });
-
-    gsap.utils.toArray('.section-h').forEach(el => {
-      gsap.from(el, {
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 85%'
-        },
-        opacity: 0,
-        y: 20,
-        duration: 0.8,
-        ease: 'power2.out'
-      });
-    });
-  </script>
 </body>
 </html>
