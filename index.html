@@ -1,156 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Winnie Kenneth | AI & Software Developer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    :root {
-      --bg:#0d1117;
-      --panel:#161b22;
-      --ink:#e6edf3;
-      --accent:#00b3ff;
-      --muted:#8b949e;
-    }
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;}
-    h1,h2,h3,h4{color:var(--ink);font-weight:700;}
-    a{color:var(--accent);text-decoration:none;}
-    section{max-width:1000px;margin:0 auto;padding:4rem 1.5rem;}
-    header{text-align:center;padding:5rem 1.5rem;background:var(--panel);}
-    header h1{font-size:2.5rem;}
-    header p{color:var(--muted);font-size:1.1rem;}
-    .btn{display:inline-block;padding:0.7rem 1.4rem;border-radius:8px;background:var(--accent);color:#fff;font-weight:600;margin-top:1rem;}
-    .project-card,.experience-card{background:var(--panel);padding:2rem;margin-bottom:2rem;border-radius:12px;box-shadow:0 0 20px rgba(0,0,0,0.25);}
-    .project-header h3{color:var(--accent);}
-    .meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0;}
-    .meta h5{color:var(--muted);font-size:0.85rem;text-transform:uppercase;margin-bottom:0.2rem;}
-    .project-details ul,.experience-details{margin-left:1rem;}
-    .detail-section h5{color:var(--accent);margin-top:1rem;}
-    footer{text-align:center;color:var(--muted);padding:3rem 1rem;font-size:0.9rem;border-top:1px solid #1f2329;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Winnie Kenneth | AI & Software Developer Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --bg:#0b0f16;
+  --panel:#121826;
+  --accent:#00b3ff;
+  --ink:#e8edf2;
+  --muted:#9ba3b1;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;}
+h1,h2,h3,h4{font-weight:700;color:var(--ink);}
+a{color:var(--accent);text-decoration:none;transition:0.2s;}
+a:hover{opacity:0.8;}
+section{max-width:1100px;margin:0 auto;padding:4rem 1.5rem;}
+header{background:var(--panel);text-align:center;padding:5rem 1.5rem;}
+header h1{font-size:2.8rem;}
+header p{color:var(--muted);font-size:1.15rem;margin-top:0.5rem;}
+.contact{margin-top:1rem;font-size:1rem;}
+.contact a{margin:0 0.5rem;}
+.btn{display:inline-block;padding:0.7rem 1.3rem;border-radius:8px;background:var(--accent);color:#fff;font-weight:600;margin-top:1rem;}
+.btn.secondary{background:none;border:1px solid var(--accent);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
+.card{background:var(--panel);padding:2rem;border-radius:12px;box-shadow:0 0 25px rgba(0,0,0,0.25);}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0;}
+.meta h5{color:var(--muted);font-size:0.8rem;text-transform:uppercase;margin-bottom:0.2rem;}
+ul{margin-left:1rem;}
+footer{text-align:center;color:var(--muted);padding:3rem 1rem;font-size:0.9rem;border-top:1px solid #1e2433;}
+.fade-in{animation:fadein 1s ease;}
+@keyframes fadein{from{opacity:0;transform:translateY(15px);}to{opacity:1;transform:translateY(0);}}
+</style>
 </head>
+
 <body>
-<header>
+<header class="fade-in">
   <h1>Winnie Kenneth</h1>
-  <p>Final-Year BSc Computer Science Student | AI & Software Developer | Building real-world solutions with Python and Intelligence</p>
-  <a class="btn" href="https://github.com/Whiney001" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-  <a class="btn" href="https://www.linkedin.com/in/winnie-kenneth-28a862287/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+  <p>Final-Year BSc Computer Science Student at University of Hull<br>
+  Specialising in Artificial Intelligence, Data Engineering & Full-Stack Development</p>
+  <div class="contact">
+    <a href="mailto:kennethwinniefred746@gmail.com"><i class="fas fa-envelope"></i> kennethwinniefred746@gmail.com</a> |
+    <a href="https://www.linkedin.com/in/winnie-kenneth-28a862287/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+    <a href="https://github.com/Whiney001" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+  </div>
+  <a class="btn" href="Winnie_Kenneth_CV.pdf" target="_blank"><i class="fas fa-download"></i> Download CV</a>
 </header>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Highlighted Projects</h2>
+<section id="about">
+  <h2>About Me</h2>
+  <p>I’m a final-year Computer Science student passionate about building intelligent, data-driven applications that solve real business problems.
+  My work combines software engineering, machine learning, and user-centred design to create systems that are both powerful and usable.
+  I’ve delivered production-ready AI and web solutions for organisations, balancing technical depth with clear communication and teamwork.</p>
+</section>
 
-  <!-- 1. AI-Powered Document Assistant -->
-  <div class="project-card">
-    <div class="project-header">
-      <h3>AI-Powered Document Assistant (RAG Application)</h3>
-      <p>Client-level chatbot that lets users chat with their PDFs using Retrieval-Augmented Generation (RAG)</p>
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="grid">
+    <div class="card">
+      <h4>Programming & Data</h4>
+      <p>Python, SQL, C#, JavaScript, Java</p>
+      <p>Pandas, NumPy, Scikit-learn, TensorFlow</p>
     </div>
-    <div class="meta-grid">
-      <div class="meta"><h5>Timeline</h5><div>2-week sprint</div></div>
-      <div class="meta"><h5>Role</h5><div>Full-Stack AI Developer (Eagles Wing Limited)</div></div>
-      <div class="meta"><h5>Stack</h5><div>Python · LangChain · OpenAI API · ChromaDB · Streamlit · PyPDF</div></div>
+    <div class="card">
+      <h4>AI & Machine Learning</h4>
+      <p>LangChain, OpenAI API, PyTorch, NLP, Fairlearn, Neural Networks, Predictive Modelling</p>
     </div>
-    <div class="project-details">
-      <div class="detail-section">
-        <h5><i class="fas fa-robot"></i> Overview</h5>
-        <ul>
-          <li>Built and deployed a secure AI assistant that answers questions about uploaded documents in real time.</li>
-          <li>Implemented RAG pipeline for document chunking, vector embedding (OpenAI embeddings) and semantic retrieval (ChromaDB).</li>
-          <li>Integrated GPT-4o-mini model for context-aware answers with citations and source references.</li>
-          <li>Delivered as a browser-based tool for internal use — automating policy and report search.</li>
-        </ul>
-      </div>
-      <div class="detail-section">
-        <h5><i class="fas fa-lightbulb"></i> Impact</h5>
-        <ul>
-          <li>Reduced document lookup time by 80 % for Eagles Wing Limited’s operations team.</li>
-          <li>Showcases end-to-end AI delivery skills — data processing, API integration and deployment.</li>
-        </ul>
-      </div>
-      <div class="cta">
-        <a class="btn" href="https://github.com/Whiney001/ai-document-assistant" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
-      </div>
+    <div class="card">
+      <h4>Web & Cloud</h4>
+      <p>Flask, Streamlit, React (basics), Azure, AWS, Docker, Git, REST APIs</p>
     </div>
-  </div>
-
-  <!-- 2. Smart City Delivery Optimization -->
-  <div class="project-card">
-    <div class="project-header">
-      <h3>Smart City Delivery Optimization</h3>
-      <p>Predictive routing system using machine learning to minimize delivery cost and travel time across urban networks.</p>
-    </div>
-    <div class="meta-grid">
-      <div class="meta"><h5>Timeline</h5><div>University Major Project</div></div>
-      <div class="meta"><h5>Stack</h5><div>Python · Pandas · Scikit-learn · Neural Networks · Dijkstra/A*</div></div>
-    </div>
-    <div class="project-details">
-      <ul>
-        <li>Compared Polynomial Regression vs Neural Network models for travel cost prediction.</li>
-        <li>Implemented BFS/Dijkstra/A* algorithms for path finding and route visualization.</li>
-        <li>Delivered evaluation report with performance metrics and cost-efficiency insights.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- 3. LightHR Fairness Analysis -->
-  <div class="project-card">
-    <div class="project-header">
-      <h3>LightHR – AI Fairness Analyzer</h3>
-      <p>Bias detection system for AI-driven recruitment datasets using association rules and fairness metrics.</p>
-    </div>
-    <div class="meta-grid">
-      <div class="meta"><h5>Timeline</h5><div>Academic Research Project</div></div>
-      <div class="meta"><h5>Stack</h5><div>Python · Pandas · Numpy · Matplotlib · Fairlearn</div></div>
-    </div>
-    <div class="project-details">
-      <ul>
-        <li>Analyzed gender and age bias in HR datasets through rule-mining and fairness evaluation metrics.</li>
-        <li>Recommended data pre-processing strategies to improve model fairness in automated screening tools.</li>
-      </ul>
+    <div class="card">
+      <h4>Soft Skills</h4>
+      <p>Agile Collaboration, Problem Solving, Communication, Leadership, UX Awareness</p>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
+<section id="projects">
+  <h2>Featured Projects</h2>
+
+  <!-- Project 1 -->
+  <div class="card">
+    <h3>AI-Powered Document Assistant (RAG Application)</h3>
+    <p class="muted">Client project developed for Eagles Wing Limited — a smart chatbot that allows users to chat with uploaded PDFs using Retrieval-Augmented Generation.</p>
+    <div class="meta-grid">
+      <div class="meta"><h5>Stack</h5><div>Python, LangChain, OpenAI API, Streamlit, ChromaDB</div></div>
+      <div class="meta"><h5>Timeline</h5><div>2-week sprint</div></div>
+      <div class="meta"><h5>Role</h5><div>Full-Stack AI Developer</div></div>
+    </div>
+    <ul>
+      <li>Implemented RAG pipeline for PDF ingestion, vector embeddings, and semantic retrieval.</li>
+      <li>Integrated GPT-4o-mini for accurate, cited answers drawn from internal documents.</li>
+      <li>Deployed a browser-based Streamlit interface with secure key management.</li>
+      <li>Reduced manual lookup time by 80 % across internal teams.</li>
+    </ul>
+    <div style="margin-top:1rem;">
+      <a class="btn" href="https://github.com/Whiney001/ai-document-assistant" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+      <a class="btn secondary" href="#" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="card">
+    <h3>Smart City Delivery Optimization</h3>
+    <p>Machine-learning model that predicts optimal routes and delivery costs across smart-city datasets using regression and graph algorithms.</p>
+    <ul>
+      <li>Compared Polynomial Regression vs Neural Network models for travel-cost forecasting.</li>
+      <li>Implemented BFS, Dijkstra, and A* algorithms for intelligent route planning.</li>
+      <li>Delivered visual analytics and performance evaluation dashboard in Python.</li>
+    </ul>
+    <div style="margin-top:1rem;">
+      <a class="btn" href="https://github.com/Whiney001/SmartCityDeliveryOptimization" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="card">
+    <h3>LightHR – AI Fairness Analyzer</h3>
+    <p>Bias detection and mitigation system for recruitment datasets using rule mining and fairness metrics.</p>
+    <ul>
+      <li>Applied statistical and algorithmic fairness techniques to HR data.</li>
+      <li>Used association-rule mining to identify bias patterns across gender and age attributes.</li>
+      <li>Implemented visual dashboards for fairness comparison and transparency reporting.</li>
+    </ul>
+    <div style="margin-top:1rem;">
+      <a class="btn" href="https://github.com/Whiney001/LightHR" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Project 4 -->
+  <div class="card">
+    <h3>Student Wellbeing Engagement App</h3>
+    <p>C# console-based system built to help students track wellbeing, designed with SQLite database and role-based user profiles.</p>
+    <ul>
+      <li>Implemented CRUD operations, authentication, and feedback tracking using C# and SQLite.</li>
+      <li>Enhanced UX with structured menus and data validation for reliability.</li>
+    </ul>
+    <div style="margin-top:1rem;">
+      <a class="btn" href="https://github.com/Whiney001/EngagementApp" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+    </div>
+  </div>
+</section>
+
 <section id="experience">
   <h2>Work Experience</h2>
 
-  <div class="experience-card">
-    <div class="experience-header">
-      <h3>Eagles Wing Limited</h3>
-      <h4>Remote | Tech Associate (Software & AI Systems)</h4>
-      <span class="date">Jan 2025 – Present</span>
-    </div>
-    <ul class="experience-details">
-      <li>Collaborated with the company’s tech unit to modernise internal operations through automation and AI integration.</li>
-      <li>Built internal dashboards and lightweight tools in <strong>Python, Flask, SQL</strong> for data tracking and project reports.</li>
-      <li>Integrated OpenAI APIs to automate document summaries and client communications.</li>
-      <li>Delivered and maintained the AI-Powered Document Assistant project for policy search and knowledge retrieval.</li>
+  <div class="card">
+    <h3>Eagles Wing Limited</h3>
+    <h4>Remote | Tech Associate (Software & AI Systems)</h4>
+    <p><em>Jan 2025 – Present</em></p>
+    <ul>
+      <li>Collaborated with the tech team to integrate automation and AI solutions into daily workflows.</li>
+      <li>Built internal dashboards and lightweight web apps using Python, Flask, and SQL for operational reporting.</li>
+      <li>Integrated OpenAI APIs for report summarisation and developed the AI-Powered Document Assistant.</li>
+      <li>Worked cross-functionally with managers to deliver digital transformation initiatives.</li>
     </ul>
   </div>
 
-  <div class="experience-card">
-    <div class="experience-header">
-      <h3>Step Recruitment</h3>
-      <h4>Digital Transformation Intern (Entertainment Client)</h4>
-      <span class="date">Jul 2025 – Sep 2025</span>
-    </div>
-    <ul class="experience-details">
-      <li>Maintained and optimized an entertainment website, improving speed and responsiveness with HTML, CSS and JavaScript.</li>
-      <li>Integrated analytics tracking for user engagement and performance insights.</li>
-      <li>Worked with marketing and tech teams to ensure content accuracy and reliable updates.</li>
-      <li>Documented weekly progress and suggested UX enhancements for future iterations.</li>
+  <div class="card">
+    <h3>Step Recruitment</h3>
+    <h4>Digital Transformation Intern (Entertainment Client)</h4>
+    <p><em>Jul 2025 – Sep 2025</em></p>
+    <ul>
+      <li>Maintained and enhanced an entertainment company’s website using HTML, CSS, and JavaScript.</li>
+      <li>Integrated Google Analytics for engagement tracking and insights.</li>
+      <li>Improved responsiveness and content workflow, collaborating with marketing teams.</li>
     </ul>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 Winnie Kenneth | Final-Year Computer Science Student | University of Hull</p>
+  <p>© 2025 Winnie Kenneth | University of Hull | AI & Software Developer Portfolio</p>
 </footer>
 </body>
 </html>
