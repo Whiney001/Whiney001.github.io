@@ -1,91 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Winnie Kenneth | Software Engineer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winnie Kenneth | Portfolio</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg:#f8f9fc;
+      --card:#ffffff;
+      --text:#1b1b1b;
+      --sub:#555;
+      --accent:#4a6bff;
+      --accent-soft:#e8edff;
+      --radius:14px;
+    }
+
+    body {
+      font-family: "Inter", system-ui;
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    header {
+      padding:60px 20px 40px;
+      text-align:center;
+    }
+
+    h1 {
+      font-size:34px;
+      font-weight:700;
+      margin:0 0 10px;
+    }
+
+    .subtitle {
+      max-width:600px;
+      margin:auto;
+      color:var(--sub);
+      font-size:16px;
+    }
+
+    .socials a {
+      margin:0 10px;
+      color:var(--accent);
+      font-weight:600;
+      text-decoration:none;
+      font-size:15px;
+    }
+
+    .section-title {
+      font-size:22px;
+      font-weight:700;
+      margin:40px 0 15px;
+      text-align:center;
+    }
+
+    .projects {
+      display:grid;
+      gap:20px;
+      padding:0 20px;
+      max-width:950px;
+      margin:auto;
+    }
+
+    .card {
+      background:var(--card);
+      padding:22px;
+      border-radius:var(--radius);
+      border:1px solid #ddd;
+      transition:0.25s;
+    }
+
+    .card:hover {
+      transform:translateY(-4px);
+      border-color:var(--accent);
+      box-shadow:0 6px 14px rgba(0,0,0,0.07);
+    }
+
+    .card-title {
+      font-size:19px;
+      font-weight:700;
+      margin-bottom:6px;
+    }
+
+    .tech {
+      font-size:14px;
+      color:var(--sub);
+      margin:6px 0 14px;
+    }
+
+    .btn {
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:var(--radius);
+      background:var(--accent);
+      color:#fff;
+      font-size:14px;
+      font-weight:600;
+      text-decoration:none;
+      transition:0.2s;
+    }
+
+    .btn:hover {
+      background:#2e49cc;
+    }
+
+    footer {
+      text-align:center;
+      padding:40px;
+      font-size:14px;
+      color:var(--sub);
+    }
+
+    /* Skills */
+    .skills {
+      max-width:900px;
+      margin:0 auto;
+      padding:20px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      font-size:15px;
+    }
+
+    @media(max-width:700px){
+      .skills {grid-template-columns:1fr;}
+    }
+  </style>
 </head>
 
 <body>
-  <header class="header">
-    <h1 class="name">Winnie Kenneth</h1>
-    <p class="subtitle">Final-year Computer Science student specialising in AI, ML, and full-stack engineering.</p>
 
-    <div class="socials">
-      <a href="https://github.com/Whiney001" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/winnie-kenneth-28a862287/" target="_blank">LinkedIn</a>
-      <a href="mailto:kennethwinniefred746@gmail.com">Email</a>
-    </div>
-  </header>
+<header>
+  <h1>Winnie Kenneth</h1>
+  <p class="subtitle">Final-year Computer Science student specializing in AI/ML, data engineering, and full-stack software development.</p>
 
-  <main>
-    <section class="projects-section">
-      <h2 class="section-title">Projects</h2>
+  <div class="socials">
+    <a href="https://github.com/Whiney001"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.linkedin.com/in/winnie-kenneth-28a862287/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="mailto:kennethwinniefred746@gmail.com"><i class="fa fa-envelope"></i> Email</a>
+  </div>
+</header>
 
-      <!-- Gesture Recognition -->
-      <div class="project-card">
-        <img src="gesture.png" alt="Gesture Recognition Robot" class="project-img" />
-        <h3>Gesture-Controlled Robot Navigation</h3>
-        <p>Real-time hand gesture recognition using MediaPipe & OpenCV to control robot commands.</p>
-        <p class="tech">Python • OpenCV • MediaPipe</p>
-        <a href="https://github.com/Whiney001/GestureRobotProject" target="_blank" class="btn">View Code</a>
-      </div>
+<h2 class="section-title">Featured Projects</h2>
 
-      <!-- Wellbeing React App -->
-      <div class="project-card">
-        <img src="wellbeing-react.png" alt="Student Wellbeing Platform" class="project-img" />
-        <h3>Student Wellbeing Support Platform (React)</h3>
-        <p>Role-based student wellbeing platform with dashboards, mood check-ins, and secure routes.</p>
-        <p class="tech">React • Router • Recharts • CSS</p>
-        <a href="https://github.com/Whiney001/StudentWellbeingReact" target="_blank" class="btn">View Code</a>
-      </div>
+<div class="projects">
 
-      <!-- EduConnect Console -->
-      <div class="project-card">
-        <img src="educonnect.png" alt="EduConnect console app" class="project-img" />
-        <h3>EduConnect — Console Wellbeing System</h3>
-        <p>C# console wellbeing system for Students, Supervisors, and Senior Tutors.</p>
-        <p class="tech">C# • .NET • JSON Storage</p>
-        <a href="https://github.com/Whiney001/EduConnect" target="_blank" class="btn">View Code</a>
-      </div>
+  <div class="card">
+    <div class="card-title">Gesture-Controlled Robot Navigation</div>
+    <p>Real-time hand tracking using MediaPipe + OpenCV to control robot movement.</p>
+    <div class="tech">Python • MediaPipe • OpenCV</div>
+    <a class="btn" href="https://github.com/Whiney001/GestureRobotProject">View Code</a>
+  </div>
 
-      <!-- Smart City ML -->
-      <div class="project-card">
-        <img src="smartcity.png" alt="Smart City ML project" class="project-img" />
-        <h3>Smart City Delivery Cost Optimisation (ML)</h3>
-        <p>Delivery route prediction using Linear & Polynomial Regression and Neural Networks.</p>
-        <p class="tech">Python • scikit-learn • NumPy • Pandas</p>
-        <a href="https://github.com/Whiney001/SmartCityDeliveryML" target="_blank" class="btn">View Code</a>
-      </div>
+  <div class="card">
+    <div class="card-title">Student Wellbeing Platform (React)</div>
+    <p>Role-based wellbeing system with dashboards, mood check-ins and secure routing.</p>
+    <div class="tech">React • Router • CSS</div>
+    <a class="btn" href="https://github.com/Whiney001/StudentWellbeingReact">View Code</a>
+  </div>
 
-      <!-- Restaurant DB App -->
-      <div class="project-card">
-        <img src="restaurant.png" alt="Restaurant DB system" class="project-img" />
-        <h3>Restaurant Database Management System</h3>
-        <p>SQLite-powered CLI app to manage menus, reviews, and dietary data securely.</p>
-        <p class="tech">Python • SQLite</p>
-        <a href="https://github.com/Whiney001/RestaurantDBSystem" target="_blank" class="btn">View Code</a>
-      </div>
+  <div class="card">
+    <div class="card-title">EduConnect (C# Console System)</div>
+    <p>Wellbeing management system for Students and Supervisors with JSON storage.</p>
+    <div class="tech">C# • .NET • JSON</div>
+    <a class="btn" href="https://github.com/Whiney001/EduConnect">View Code</a>
+  </div>
 
-    </section>
+  <div class="card">
+    <div class="card-title">Smart City Delivery Cost ML</div>
+    <p>Predictive cost model using Linear/Polynomial Regression + Neural Networks.</p>
+    <div class="tech">Python • scikit-learn • Pandas</div>
+    <a class="btn" href="https://github.com/Whiney001/SmartCityDeliveryML">View Code</a>
+  </div>
 
-    <section class="skills-section">
-      <h2 class="section-title">Skills</h2>
+  <div class="card">
+    <div class="card-title">Restaurant Database CLI</div>
+    <p>SQLite-based CLI to manage restaurants, menus and dietary filters.</p>
+    <div class="tech">Python • SQLite</div>
+    <a class="btn" href="https://github.com/Whiney001/RestaurantDBSystem">View Code</a>
+  </div>
 
-      <div class="skills-grid">
-        <div><strong>Languages:</strong> Python, C#, JavaScript</div>
-        <div><strong>Frameworks:</strong> React, scikit-learn, OpenCV, MediaPipe</div>
-        <div><strong>Tools:</strong> Git, GitHub Actions, SQLite, JSON</div>
-        <div><strong>Soft Skills:</strong> Problem-solving, teamwork, communication</div>
-      </div>
-    </section>
-  </main>
+</div>
 
-  <footer class="footer">
-    © 2025 Winnie Kenneth — All Rights Reserved
-  </footer>
+<h2 class="section-title">Skills</h2>
 
-  <script src="script.js"></script>
+<div class="skills">
+  <div><b>Languages:</b> Python, C#, JavaScript</div>
+  <div><b>AI & Data:</b> scikit-learn, MediaPipe, NumPy, Pandas</div>
+  <div><b>Frameworks:</b> React, .NET</div>
+  <div><b>Tools:</b> Git, GitHub, SQLite, JSON</div>
+</div>
+
+<footer>© 2025 Winnie Kenneth. All rights reserved.</footer>
+
 </body>
 </html>
