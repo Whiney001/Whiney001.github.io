@@ -4,135 +4,229 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Winnie Kenneth – Software Engineering Portfolio</title>
-  <meta name="description" content="Final-year Computer Science student. Selected projects in computer vision, ML and full-stack engineering.">
+  <meta name="description" content="Final-year Computer Science student. Selected projects in computer vision, ML and full-stack engineering." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Winnie Kenneth</a>
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="https://github.com/Whiney001" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" id="hamburgerBtn"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-drawer" id="mobileDrawer" hidden>
+      <a href="#projects" onclick="closeDrawer()">Projects</a>
+      <a href="#skills" onclick="closeDrawer()">Skills</a>
+      <a href="#contact" onclick="closeDrawer()">Contact</a>
+      <a class="nav-cta outline" href="https://www.linkedin.com/in/winnie-kenneth-28a862287/" target="_blank" rel="noreferrer" onclick="closeDrawer()">LinkedIn</a>
+      <a class="nav-cta" href="https://github.com/Whiney001" target="_blank" rel="noreferrer" onclick="closeDrawer()">GitHub</a>
+    </div>
+  </header>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="#">Winnie Kenneth</a>
-    <nav class="nav">
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="mailto:kennethwinniefred746@gmail.com">Email</a>
-      <a class="nav-cta" href="https://github.com/Whiney001" target="_blank">GitHub</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-copy">
-      <h1>Software Engineering Portfolio</h1>
-      <p>Final-year Computer Science student focused on AI/ML, computer vision and full-stack development.</p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn" target="_blank" href="https://github.com/Whiney001">GitHub</a>
-        <a class="btn outline" href="mailto:kennethwinniefred746@gmail.com">Contact</a>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Software Engineering Portfolio</h1>
+        <p>Final-year Computer Science student focused on AI/ML, computer vision, and full-stack delivery. This portfolio highlights production-minded builds with readable code and clear outcomes.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/Whiney001">View GitHub</a>
+          <a class="btn outline" href="mailto:kennethwinniefred746@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="glow one"></div>
+        <div class="glow two"></div>
+        <div class="glow three"></div>
+        <!-- Optional headshot: place assets/headshot.jpg to show; otherwise an illustration -->
+        <img id="heroImage" src="assets/hero-illustration.svg" alt="Abstract tech illustration" />
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="projects" class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2>Featured Projects</h2>
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Featured Projects</h2>
+        <p>Strongest first. Cards pull live metadata from GitHub (stars and last updated).</p>
+      </div>
+
+      <div class="grid">
+        <!-- 1. Gesture Robot -->
+        <article class="card fade" data-repo="gesture-control-robot-navigation">
+          <div class="card-media">
+            <img src="assets/gesture.jpg" alt="Gesture-controlled robot dashboard" />
+          </div>
+          <div class="card-body">
+            <h3>Gesture-Controlled Robot Navigation</h3>
+            <p>Real-time hand-gesture recognition using OpenCV + MediaPipe, mapped to robot navigation and control actions.</p>
+            <ul class="pill-list">
+              <li>Python</li><li>OpenCV</li><li>MediaPipe</li>
+            </ul>
+            <div class="card-meta">
+              <span class="meta-stars">★ –</span>
+              <span class="meta-updated">Updated —</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/Whiney001/gesture-control-robot-navigation">Repository</a>
+              <a class="text-link" target="_blank" rel="noreferrer" href="https://github.com/Whiney001/gesture-control-robot-navigation/tree/main">Browse code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Student Wellbeing (React) -->
+        <article class="card fade" data-repo="student-wellbeing-support-platform">
+          <div class="card-media">
+            <img src="assets/wellbeing-react.jpg" alt="Student wellbeing web app" />
+          </div>
+          <div class="card-body">
+            <h3>Student Wellbeing Support Platform (React)</h3>
+            <p>Role-based wellbeing web app with mood check-ins, dashboards, protected routes and responsive UI.</p>
+            <ul class="pill-list">
+              <li>React</li><li>React Router</li><li>Recharts</li>
+            </ul>
+            <div class="card-meta">
+              <span class="meta-stars">★ –</span>
+              <span class="meta-updated">Updated —</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/Whiney001/student-wellbeing-support-platform">Repository</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. EduConnect Console -->
+        <article class="card fade" data-repo="educonnect-student-wellbeing-console-app">
+          <div class="card-media">
+            <img src="assets/educonnect.jpg" alt="EduConnect console system" />
+          </div>
+          <div class="card-body">
+            <h3>EduConnect — Console Wellbeing System</h3>
+            <p>C# console system for Students, Supervisors and Senior Tutors; JSON persistence with menu-driven workflows.</p>
+            <ul class="pill-list">
+              <li>C#</li><li>.NET</li><li>JSON</li>
+            </ul>
+            <div class="card-meta">
+              <span class="meta-stars">★ –</span>
+              <span class="meta-updated">Updated —</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/Whiney001/educonnect-student-wellbeing-console-app">Repository</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Smart City ML -->
+        <article class="card fade" data-repo="smart-city-delivery-cost-optimization">
+          <div class="card-media">
+            <img src="assets/smartcity.jpg" alt="Smart city cost optimisation dashboard" />
+          </div>
+          <div class="card-body">
+            <h3>Smart City Delivery Cost Optimisation (ML)</h3>
+            <p>Model comparison pipeline (Linear/Polynomial Regression, MLP) evaluated via MAE/MSE/RMSE for delivery cost prediction.</p>
+            <ul class="pill-list">
+              <li>Python</li><li>scikit-learn</li><li>Pandas</li>
+            </ul>
+            <div class="card-meta">
+              <span class="meta-stars">★ –</span>
+              <span class="meta-updated">Updated —</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/Whiney001/smart-city-delivery-cost-optimization">Repository</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Restaurant DB -->
+        <article class="card fade" data-repo="restaurant-database-management-system">
+          <div class="card-media">
+            <img src="assets/restaurant.jpg" alt="Restaurant database management UI" />
+          </div>
+          <div class="card-body">
+            <h3>Restaurant Database Management System</h3>
+            <p>SQLite-backed CLI to manage restaurants, menus and dietary labels with parameterised queries.</p>
+            <ul class="pill-list">
+              <li>Python</li><li>SQLite</li>
+            </ul>
+            <div class="card-meta">
+              <span class="meta-stars">★ –</span>
+              <span class="meta-updated">Updated —</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/Whiney001/restaurant-database-management-system">Repository</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <div class="grid">
-
-      <!-- Gesture Robot -->
-      <article class="card" data-repo="gesture-control-robot-navigation">
-        <div class="card-media">
-          <img src="assets/gesture.jpg" alt="Gesture robot" />
-        </div>
-        <div class="card-body">
-          <h3>Gesture-Controlled Robot Navigation</h3>
-          <p>Real-time hand-gesture control using OpenCV + MediaPipe for robot navigation.</p>
-          <ul class="pill-list">
-            <li>Python</li><li>OpenCV</li><li>MediaPipe</li>
-          </ul>
-          <a class="btn" target="_blank" href="https://github.com/Whiney001/gesture-control-robot-navigation">Repository</a>
-        </div>
-      </article>
-
-      <!-- React Wellbeing -->
-      <article class="card" data-repo="student-wellbeing-support-platform">
-        <div class="card-media">
-          <img src="assets/wellbeing-react.jpg" alt="Wellbeing app" />
-        </div>
-        <div class="card-body">
-          <h3>Student Wellbeing Support Platform</h3>
-          <p>Role-based web app with dashboards, mood tracking & secure routing.</p>
-          <ul class="pill-list">
-            <li>React</li><li>Recharts</li><li>Auth</li>
-          </ul>
-          <a class="btn" target="_blank" href="https://github.com/Whiney001/student-wellbeing-support-platform">Repository</a>
-        </div>
-      </article>
-
-      <!-- EduConnect Console -->
-      <article class="card" data-repo="educonnect-student-wellbeing-console-app">
-        <div class="card-media">
-          <img src="assets/educonnect.jpg" alt="EduConnect console app" />
-        </div>
-        <div class="card-body">
-          <h3>EduConnect Console System</h3>
-          <p>C# console system with role-based access & JSON persistence.</p>
-          <ul class="pill-list">
-            <li>C#</li><li>.NET</li><li>JSON</li>
-          </ul>
-          <a class="btn" target="_blank" href="https://github.com/Whiney001/educonnect-student-wellbeing-console-app">Repository</a>
-        </div>
-      </article>
-
-      <!-- Smart City ML -->
-      <article class="card" data-repo="smart-city-delivery-cost-optimization">
-        <div class="card-media">
-          <img src="assets/smartcity.jpg" alt="Smart City ML" />
-        </div>
-        <div class="card-body">
-          <h3>Smart City Delivery Cost Optimization</h3>
-          <p>Regression vs Neural Network pipeline for delivery route cost prediction.</p>
-          <ul class="pill-list">
-            <li>Python</li><li>scikit-learn</li><li>Pandas</li>
-          </ul>
-          <a class="btn" target="_blank" href="https://github.com/Whiney001/smart-city-delivery-cost-optimization">Repository</a>
-        </div>
-      </article>
-
+  <!-- Skills -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p>Technologies and practices applied across projects.</p>
+      </div>
+      <ul class="skills">
+        <li><strong>Languages:</strong> Python, C#, JavaScript</li>
+        <li><strong>Frameworks & Libraries:</strong> React, scikit-learn, OpenCV, MediaPipe</li>
+        <li><strong>Tools:</strong> Git, GitHub Actions, SQLite, JSON, Vite</li>
+        <li><strong>Soft Skills:</strong> Problem solving, collaboration, communication</li>
+      </ul>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="skills" class="section section-alt">
-  <div class="container">
-    <div class="section-head">
-      <h2>Skills</h2>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Open to graduate roles in software engineering, AI/ML and data.</p>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:kennethwinniefred746@gmail.com">
+          <span>Email</span>
+          <strong>kennethwinniefred746@gmail.com</strong>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/winnie-kenneth-28a862287/" target="_blank" rel="noreferrer">
+          <span>LinkedIn</span>
+          <strong>/in/winnie-kenneth-28a862287/</strong>
+        </a>
+        <a class="contact-card" href="https://github.com/Whiney001" target="_blank" rel="noreferrer">
+          <span>GitHub</span>
+          <strong>github.com/Whiney001</strong>
+        </a>
+      </div>
     </div>
-    <ul class="skills">
-      <li><strong>Languages:</strong> Python, C#, JavaScript</li>
-      <li><strong>Frameworks:</strong> React, OpenCV, MediaPipe, scikit-learn</li>
-      <li><strong>Tools:</strong> Git, GitHub Actions, SQLite, Vite</li>
-      <li><strong>Soft Skills:</strong> Problem-solving, teamwork, communication</li>
-    </ul>
-  </div>
-</section>
+  </section>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© <span id="year"></span> Winnie Kenneth</p>
-    <div class="footer-links">
-      <a href="https://github.com/Whiney001" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/winnie-kenneth-28a862287/" target="_blank">LinkedIn</a>
-      <a href="mailto:kennethwinniefred746@gmail.com">Email</a>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Winnie Kenneth</p>
+      <div class="footer-links">
+        <a href="https://github.com/Whiney001" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/winnie-kenneth-28a862287/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:kennethwinniefred746@gmail.com">Email</a>
+      </div>
     </div>
-  </div>
-</footer>
+    <div class="license">Theme adapted from an open-source template. Licensed under GPL-3.0; keep LICENSE in the repository.</div>
+  </footer>
 
-<script src="script.js"></script>
+  <script>
+    window.GITHUB_USERNAME = "Whiney001";
+  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
