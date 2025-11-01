@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Winnie Kenneth – Software Engineering Portfolio</title>
+  <meta name="description" content="Final-year Computer Science student. Selected projects in computer vision, ML and full-stack engineering.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#">Winnie Kenneth</a>
+    <nav class="nav">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="mailto:kennethwinniefred746@gmail.com">Email</a>
+      <a class="nav-cta" href="https://github.com/Whiney001" target="_blank">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <h1>Software Engineering Portfolio</h1>
+      <p>Final-year Computer Science student focused on AI/ML, computer vision and full-stack development.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn" target="_blank" href="https://github.com/Whiney001">GitHub</a>
+        <a class="btn outline" href="mailto:kennethwinniefred746@gmail.com">Contact</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Featured Projects</h2>
+    </div>
+
+    <div class="grid">
+
+      <!-- Gesture Robot -->
+      <article class="card" data-repo="gesture-control-robot-navigation">
+        <div class="card-media">
+          <img src="assets/gesture.jpg" alt="Gesture robot" />
+        </div>
+        <div class="card-body">
+          <h3>Gesture-Controlled Robot Navigation</h3>
+          <p>Real-time hand-gesture control using OpenCV + MediaPipe for robot navigation.</p>
+          <ul class="pill-list">
+            <li>Python</li><li>OpenCV</li><li>MediaPipe</li>
+          </ul>
+          <a class="btn" target="_blank" href="https://github.com/Whiney001/gesture-control-robot-navigation">Repository</a>
+        </div>
+      </article>
+
+      <!-- React Wellbeing -->
+      <article class="card" data-repo="student-wellbeing-support-platform">
+        <div class="card-media">
+          <img src="assets/wellbeing-react.jpg" alt="Wellbeing app" />
+        </div>
+        <div class="card-body">
+          <h3>Student Wellbeing Support Platform</h3>
+          <p>Role-based web app with dashboards, mood tracking & secure routing.</p>
+          <ul class="pill-list">
+            <li>React</li><li>Recharts</li><li>Auth</li>
+          </ul>
+          <a class="btn" target="_blank" href="https://github.com/Whiney001/student-wellbeing-support-platform">Repository</a>
+        </div>
+      </article>
+
+      <!-- EduConnect Console -->
+      <article class="card" data-repo="educonnect-student-wellbeing-console-app">
+        <div class="card-media">
+          <img src="assets/educonnect.jpg" alt="EduConnect console app" />
+        </div>
+        <div class="card-body">
+          <h3>EduConnect Console System</h3>
+          <p>C# console system with role-based access & JSON persistence.</p>
+          <ul class="pill-list">
+            <li>C#</li><li>.NET</li><li>JSON</li>
+          </ul>
+          <a class="btn" target="_blank" href="https://github.com/Whiney001/educonnect-student-wellbeing-console-app">Repository</a>
+        </div>
+      </article>
+
+      <!-- Smart City ML -->
+      <article class="card" data-repo="smart-city-delivery-cost-optimization">
+        <div class="card-media">
+          <img src="assets/smartcity.jpg" alt="Smart City ML" />
+        </div>
+        <div class="card-body">
+          <h3>Smart City Delivery Cost Optimization</h3>
+          <p>Regression vs Neural Network pipeline for delivery route cost prediction.</p>
+          <ul class="pill-list">
+            <li>Python</li><li>scikit-learn</li><li>Pandas</li>
+          </ul>
+          <a class="btn" target="_blank" href="https://github.com/Whiney001/smart-city-delivery-cost-optimization">Repository</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Skills</h2>
+    </div>
+    <ul class="skills">
+      <li><strong>Languages:</strong> Python, C#, JavaScript</li>
+      <li><strong>Frameworks:</strong> React, OpenCV, MediaPipe, scikit-learn</li>
+      <li><strong>Tools:</strong> Git, GitHub Actions, SQLite, Vite</li>
+      <li><strong>Soft Skills:</strong> Problem-solving, teamwork, communication</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Winnie Kenneth</p>
+    <div class="footer-links">
+      <a href="https://github.com/Whiney001" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/winnie-kenneth-28a862287/" target="_blank">LinkedIn</a>
+      <a href="mailto:kennethwinniefred746@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
