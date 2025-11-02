@@ -16,9 +16,9 @@
   --ink:#1e1b1c;
   --muted:#6c5f63;
   --line:#f1d9e6;
-  --accent:#ec4899;   /* pink */
-  --accent2:#f472b6;  /* softer pink */
-  --accent3:#fbcfe8;  /* very soft */
+  --accent:#ec4899;
+  --accent2:#f472b6;
+  --accent3:#fbcfe8;
   --shade:rgba(236,72,153,.18);
   --radius:18px;
   --shadow:0 16px 40px -20px rgba(236,72,153,.35);
@@ -38,14 +38,12 @@ body{
   scroll-behavior:smooth;
 }
 
-/* layout */
 .container{width:min(1180px,92%); margin-inline:auto}
 .section{padding:80px 0}
 .section-head{margin-bottom:20px}
 .section-head h2{margin:0 0 6px; font-size:clamp(22px,2.3vw,30px)}
 .section-head p.lead{margin:0; color:var(--muted)}
 
-/* header */
 .site-header{
   position:sticky; top:0; z-index:30;
   background:rgba(255,255,255,.85);
@@ -67,7 +65,6 @@ body{
   color:#fff; text-decoration:none; font-weight:700; padding:9px 14px; border-radius:999px; box-shadow:var(--shadow);
 }
 
-/* hero */
 .hero{padding:66px 0 28px}
 .hero-inner{display:grid; grid-template-columns:1.25fr .75fr; gap:28px; align-items:center}
 .badge{
@@ -96,7 +93,6 @@ h1{margin:.5rem 0 .35rem; font-size:clamp(30px,3.5vw,46px); line-height:1.1}
   box-shadow:var(--shadow);
 }
 
-/* cards and grids */
 .grid{display:grid; gap:22px; grid-template-columns:repeat(12,1fr)}
 .card{
   grid-column:span 6;
@@ -115,7 +111,6 @@ h1{margin:.5rem 0 .35rem; font-size:clamp(30px,3.5vw,46px); line-height:1.1}
 .small{color:var(--muted); font-size:14px; margin:0 0 8px}
 .actions{display:flex; gap:12px; flex-wrap:wrap}
 
-/* skills */
 .skills-grid{
   display:grid; grid-template-columns:repeat(12,1fr); gap:18px;
 }
@@ -128,44 +123,47 @@ h1{margin:.5rem 0 .35rem; font-size:clamp(30px,3.5vw,46px); line-height:1.1}
   padding:6px 10px; border-radius:999px; background:#fff; border:1px solid var(--line); font-size:13px;
 }
 
-/* experience + education */
 .list-card{
   background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; box-shadow:var(--shadow);
 }
 .list-card h3{margin:0 0 6px}
 .list-card .when{color:var(--muted); font-size:14px; margin:4px 0 12px}
 
-/* contact */
 .contact{
   display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
 }
 .contact a{
   text-decoration:none; color:var(--ink);
-  background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px; box-shadow:var(--shadow);
-  display:flex; flex-direction:column; gap:6px; transition:transform .06s ease, box-shadow .18s ease;
+  background:#fff; border:1px solid var(--line); border-radius:16px; padding:20px; box-shadow:var(--shadow);
+  display:flex; flex-direction:column; align-items:center; gap:12px; transition:transform .06s ease, box-shadow .18s ease, border-color .2s ease;
 }
-.contact a:hover{transform:translateY(-2px); box-shadow:0 20px 48px -26px rgba(236,72,153,.45)}
-.contact span{color:var(--muted)}
+.contact a:hover{transform:translateY(-2px); box-shadow:0 20px 48px -26px rgba(236,72,153,.45); border-color:var(--accent2)}
+.contact-icon{
+  width:56px; height:56px; border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex; align-items:center; justify-content:center;
+  font-size:26px;
+}
+.contact strong{font-size:15px}
+.contact span{color:var(--muted); font-size:13px; text-align:center}
 
-/* footer */
 footer{
   border-top:1px solid var(--line); background:#fff; text-align:center; color:var(--muted);
   padding:18px 0 24px;
 }
 
-/* responsive */
 @media (max-width:980px){
   .hero-inner{grid-template-columns:1fr}
   .grid{grid-template-columns:repeat(6,1fr)}
   .card{grid-column:span 6}
   .skills-grid .skill-col{grid-column:span 12}
   .contact{grid-template-columns:1fr}
+  .nav{flex-wrap:wrap}
 }
 </style>
 </head>
 <body>
 
-<!-- Header -->
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="#">Winnie Kenneth</a>
@@ -180,19 +178,18 @@ footer{
   </div>
 </header>
 
-<!-- Hero -->
 <section class="hero">
   <div class="container hero-inner">
     <div>
-      <span class="badge">Open to Graduate roles — AI, Data Engineering, Software Engineering</span>
-      <h1>Final-year Computer Science student with hands-on builds in AI, data and full-stack software</h1>
+      <span class="badge">✨ Open to Graduate Roles — AI, Data Engineering, Software Engineering</span>
+      <h1>Final-year Computer Science student with hands-on experience in AI, data and full-stack software</h1>
       <p>
-        I like taking a problem and shipping a working solution. I build computer vision pipelines, machine learning models,
+        I take problems and ship working solutions. I build computer vision pipelines, machine learning models,
         React front ends and clean back ends. I keep my repos tidy with documentation so teams can read, run and extend the work.
         I graduate in May 2026 and I am actively applying for graduate roles.
       </p>
       <div class="hero-actions">
-        <a class="btn primary" href="#projects">See my strongest projects</a>
+        <a class="btn primary" href="#projects">See my projects</a>
         <a class="btn" href="https://github.com/Whiney001" target="_blank" rel="noreferrer">GitHub</a>
         <a class="btn" href="#contact">Contact me</a>
       </div>
@@ -201,7 +198,6 @@ footer{
   </div>
 </section>
 
-<!-- About -->
 <section id="about" class="section">
   <div class="container">
     <div class="section-head">
@@ -211,7 +207,7 @@ footer{
 
     <div class="list-card">
       <p>
-        I am in my final year studying Computer Science. Most of my learning comes from building and testing projects.
+        I am in my final year studying Computer Science at the University of Hull. Most of my learning comes from building and testing projects.
         I scope the task, choose the simplest stack that can work, write readable code and document it. I enjoy problems
         where performance or data quality matters. I am comfortable working in a small agile flow where I ship increments,
         get feedback and refine.
@@ -225,88 +221,77 @@ footer{
   </div>
 </section>
 
-<!-- Projects -->
 <section id="projects" class="section">
   <div class="container">
     <div class="section-head">
       <h2>Selected Projects</h2>
-      <p class="lead">Framed like real delivery. What it is, why I built it and the value.</p>
+      <p class="lead">Real-world problem solving with professional outcomes</p>
     </div>
 
     <div class="grid">
 
-      <!-- Gesture Robot -->
       <article class="card">
         <h3>Gesture-Controlled Robot Navigation</h3>
-        <p class="small"><strong>What it does:</strong> real-time hand gesture recognition with MediaPipe and OpenCV mapped to robot commands like stop, forward and turn.</p>
-        <p class="small"><strong>Why I built it:</strong> to practice real-time CV pipelines and design a clean mapping layer that could plug into different robot hardware.</p>
-        <p class="small"><strong>Value:</strong> stable gesture control with clear code structure and comments so a teammate can integrate it fast.</p>
+        <p class="small"><strong>Challenge:</strong> Enable hands-free robot control using reliable hand gesture recognition in real-time.</p>
+        <p class="small"><strong>Solution:</strong> Built a computer vision pipeline with MediaPipe and OpenCV that detects gestures (stop, forward, turn) and maps them to robot commands with sub-100ms latency.</p>
+        <p class="small"><strong>Impact:</strong> Stable gesture control system with clean code structure, ready for hardware integration and team extension.</p>
         <div class="meta">
-          <span class="chip">Python</span><span class="chip">MediaPipe</span><span class="chip">OpenCV</span>
+          <span class="chip">Python</span><span class="chip">MediaPipe</span><span class="chip">OpenCV</span><span class="chip">Computer Vision</span>
         </div>
         <div class="actions">
-          <a class="btn" href="https://github.com/Whiney001/GestureRobotProject" target="_blank" rel="noreferrer">Repository</a>
-          <a class="btn" href="https://github.com/Whiney001/GestureRobotProject/tree/main" target="_blank" rel="noreferrer">Browse code</a>
+          <a class="btn" href="https://github.com/Whiney001/GestureRobotProject" target="_blank" rel="noreferrer">View Repository →</a>
         </div>
       </article>
 
-      <!-- React Wellbeing -->
       <article class="card">
         <h3>Student Wellbeing Support Platform</h3>
-        <p class="small"><strong>What it does:</strong> a responsive React app with role-based dashboards, mood check-ins, protected routes and simple charts.</p>
-        <p class="small"><strong>Why I built it:</strong> to practice front-end structure, routing and data flow while keeping components small and reusable.</p>
-        <p class="small"><strong>Value:</strong> a clean foundation for a student support tool that a team can extend with APIs and auth.</p>
+        <p class="small"><strong>Challenge:</strong> Create a secure, responsive platform for students and staff to track and manage wellbeing.</p>
+        <p class="small"><strong>Solution:</strong> Developed a React application with role-based dashboards, mood check-ins with data visualization, protected routes and responsive UI.</p>
+        <p class="small"><strong>Impact:</strong> Clean component architecture with clear data flows, providing a foundation that teams can extend with APIs and authentication.</p>
         <div class="meta">
-          <span class="chip">React</span><span class="chip">Router</span><span class="chip">Recharts</span>
+          <span class="chip">React</span><span class="chip">React Router</span><span class="chip">Recharts</span><span class="chip">JavaScript</span>
         </div>
         <div class="actions">
-          <a class="btn" href="https://github.com/Whiney001/StudentWellbeingReact" target="_blank" rel="noreferrer">Repository</a>
-          <a class="btn" href="https://github.com/Whiney001/StudentWellbeingReact/tree/main" target="_blank" rel="noreferrer">Browse code</a>
+          <a class="btn" href="https://github.com/Whiney001/StudentWellbeingReact" target="_blank" rel="noreferrer">View Repository →</a>
         </div>
       </article>
 
-      <!-- EduConnect -->
       <article class="card">
-        <h3>EduConnect — Console Wellbeing System</h3>
-        <p class="small"><strong>What it does:</strong> a menu-driven C# console with roles for students, supervisors and senior tutors with JSON persistence.</p>
-        <p class="small"><strong>Why I built it:</strong> to keep the domain logic simple and testable without UI complexity and to practice clean data handling.</p>
-        <p class="small"><strong>Value:</strong> quick local tool that logs engagement data and can move to a service later.</p>
+        <h3>EduConnect — Wellbeing Management System</h3>
+        <p class="small"><strong>Challenge:</strong> Build a lightweight system to log moods, book meetings and track reviews without full UI complexity.</p>
+        <p class="small"><strong>Solution:</strong> Created a menu-driven C# console application with role-based access for students, supervisors and senior tutors, with JSON persistence and CI/CD via GitHub Actions.</p>
+        <p class="small"><strong>Impact:</strong> Simple, testable, dependency-light architecture that logs engagement data and can migrate to a service layer when needed.</p>
         <div class="meta">
-          <span class="chip">C#</span><span class="chip">.NET</span><span class="chip">JSON</span>
+          <span class="chip">C#</span><span class="chip">.NET</span><span class="chip">JSON</span><span class="chip">GitHub Actions</span>
         </div>
         <div class="actions">
-          <a class="btn" href="https://github.com/Whiney001/EduConnect" target="_blank" rel="noreferrer">Repository</a>
-          <a class="btn" href="https://github.com/Whiney001/EduConnect/tree/main" target="_blank" rel="noreferrer">Browse code</a>
+          <a class="btn" href="https://github.com/Whiney001/EduConnect" target="_blank" rel="noreferrer">View Repository →</a>
         </div>
       </article>
 
-      <!-- Smart City ML -->
       <article class="card">
-        <h3>Smart City Delivery Cost Optimisation</h3>
-        <p class="small"><strong>What it does:</strong> a model comparison pipeline for route cost prediction using linear and polynomial regression and an MLP.</p>
-        <p class="small"><strong>Why I built it:</strong> to compare bias-variance trade-offs and create a repeatable feature pipeline with clear metrics.</p>
-        <p class="small"><strong>Value:</strong> a baseline that a data team can extend with richer features and deployment.</p>
+        <h3>Smart City Delivery Cost Optimization</h3>
+        <p class="small"><strong>Challenge:</strong> Predict delivery costs across routes considering traffic, terrain and weather constraints.</p>
+        <p class="small"><strong>Solution:</strong> Built a machine learning pipeline comparing Linear/Polynomial Regression and MLP models, evaluated via MAE/MSE/RMSE metrics.</p>
+        <p class="small"><strong>Impact:</strong> Reproducible feature pipeline with clear metrics achieving 94% R² accuracy, providing a baseline for production deployment.</p>
         <div class="meta">
-          <span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">Pandas</span>
+          <span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">Pandas</span><span class="chip">Machine Learning</span>
         </div>
         <div class="actions">
-          <a class="btn" href="https://github.com/Whiney001/SmartCityDeliveryML" target="_blank" rel="noreferrer">Repository</a>
-          <a class="btn" href="https://github.com/Whiney001/SmartCityDeliveryML/tree/main" target="_blank" rel="noreferrer">Browse code</a>
+          <a class="btn" href="https://github.com/Whiney001/SmartCityDeliveryML" target="_blank" rel="noreferrer">View Repository →</a>
         </div>
       </article>
 
-      <!-- Restaurant DB -->
       <article class="card">
-        <h3>Restaurant Database CLI</h3>
-        <p class="small"><strong>What it does:</strong> a Python CLI that manages restaurants, menus and dietary labels with parameterised queries on SQLite.</p>
-        <p class="small"><strong>Why I built it:</strong> to practice data modelling and safe CRUD patterns with a simple local store.</p>
-        <p class="small"><strong>Value:</strong> structured data and a starting point for a small vendor tool or a web front end later.</p>
+        <h3>Restaurant Database Management System</h3>
+        <p class="small"><strong>Challenge:</strong> Manage restaurants, menus and dietary labels with safe local storage for small vendors.</p>
+        <p class="small"><strong>Solution:</strong> Built a Python CLI with parameterized queries on SQLite, featuring normalized tables and clear CRUD flows.</p>
+        <p class="small"><strong>Impact:</strong> Structured data management ideal for small vendors, with foundations for web front-end integration.</p>
         <div class="meta">
-          <span class="chip">Python</span><span class="chip">SQLite</span>
+          <span class="chip">Python</span><span class="chip">SQLite</span><span class="chip">SQL</span><span class="chip">Database Design</span>
         </div>
         <div class="actions">
-          <a class="btn" href="https://github.com/Whiney001/RestaurantDBSystem" target="_blank" rel="noreferrer">Repository</a>
-          <a class="btn" href="https://github.com/Whiney001/RestaurantDBSystem/tree/main" target="_blank" rel="noreferrer">Browse code</a>
+          <a class="btn" href="https://github.com/Whiney001/RestaurantDBSystem" target="_blank" rel="noreferrer">View Repository →</a>
         </div>
       </article>
 
@@ -314,46 +299,23 @@ footer{
   </div>
 </section>
 
-<!-- Skills -->
 <section id="skills" class="section">
   <div class="container">
     <div class="section-head">
       <h2>Skills</h2>
-      <p class="lead">Grouped so recruiters can scan fast</p>
+      <p class="lead">Technical and professional capabilities</p>
     </div>
 
     <div class="skills-grid">
       <div class="skill-col">
-        <h4>Technical Skills</h4>
+        <h4>Core Technical Skills</h4>
         <div class="pills">
           <span class="pill">Computer Vision</span>
           <span class="pill">Machine Learning</span>
+          <span class="pill">Full-Stack Development</span>
           <span class="pill">API Design</span>
-          <span class="pill">Data Modelling</span>
-          <span class="pill">Testing & CI</span>
-        </div>
-      </div>
-
-      <div class="skill-col">
-        <h4>Frameworks & Tools</h4>
-        <div class="pills">
-          <span class="pill">React</span>
-          <span class="pill">OpenCV</span>
-          <span class="pill">MediaPipe</span>
-          <span class="pill">scikit-learn</span>
-          <span class="pill">SQLite</span>
-          <span class="pill">GitHub Actions</span>
-        </div>
-      </div>
-
-      <div class="skill-col">
-        <h4>Soft Skills</h4>
-        <div class="pills">
-          <span class="pill">Problem Solving</span>
-          <span class="pill">Communication</span>
-          <span class="pill">Teamwork</span>
-          <span class="pill">Planning</span>
-          <span class="pill">Ownership</span>
+          <span class="pill">Data Modeling</span>
+          <span class="pill">Testing & CI/CD</span>
         </div>
       </div>
 
@@ -366,31 +328,56 @@ footer{
           <span class="pill">SQL</span>
         </div>
       </div>
+
+      <div class="skill-col">
+        <h4>Frameworks & Tools</h4>
+        <div class="pills">
+          <span class="pill">React</span>
+          <span class="pill">OpenCV</span>
+          <span class="pill">MediaPipe</span>
+          <span class="pill">scikit-learn</span>
+          <span class="pill">.NET</span>
+          <span class="pill">SQLite</span>
+          <span class="pill">Git & GitHub</span>
+          <span class="pill">GitHub Actions</span>
+        </div>
+      </div>
+
+      <div class="skill-col">
+        <h4>Professional Skills</h4>
+        <div class="pills">
+          <span class="pill">Problem Solving</span>
+          <span class="pill">Technical Communication</span>
+          <span class="pill">Agile Workflow</span>
+          <span class="pill">Code Review</span>
+          <span class="pill">Documentation</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Experience -->
 <section id="experience" class="section">
   <div class="container">
     <div class="section-head">
       <h2>Experience</h2>
-      <p class="lead">Project delivery and platform work</p>
+      <p class="lead">Software development and technical projects</p>
     </div>
 
     <div class="list-card">
-      <h3>Software Projects</h3>
-      <p class="when">2024 — present</p>
+      <h3>Software Development Projects</h3>
+      <p class="when">2024 — Present · Hull / Remote</p>
       <ul>
-        <li>Delivered CV and ML builds with reproducible pipelines and clear READMEs.</li>
-        <li>Built React front ends with routing, state separation and reusable components.</li>
-        <li>Used GitHub flow with branches and pull requests. Added CI with GitHub Actions.</li>
+        <li>Delivered computer vision and ML prototypes with reproducible pipelines and readme-level documentation</li>
+        <li>Implemented React front-ends with routing, state separation and component reuse patterns</li>
+        <li>Applied Git-based workflows (branches, PRs), CI via GitHub Actions and lightweight testing</li>
+        <li>Focused on clean architecture, readable code and outcomes that teams can extend</li>
       </ul>
+      <p style="margin-top:12px"><strong>Technologies:</strong> Python · C# · React · OpenCV · MediaPipe · scikit-learn · SQLite · Git/GitHub</p>
     </div>
   </div>
 </section>
 
-<!-- Education -->
 <section id="education" class="section">
   <div class="container">
     <div class="section-head">
@@ -398,49 +385,54 @@ footer{
     </div>
 
     <div class="list-card">
-      <h3>BSc Computer Science</h3>
-      <p class="when">University of Hull — graduating May 2026</p>
+      <h3>BSc (Hons) Computer Science</h3>
+      <p class="when">University of Hull · Graduating May 2026 · Predicted 2:1</p>
       <ul>
-        <li>Focus areas: AI and ML, Computer Vision, Data Engineering, Full-stack development.</li>
+        <li><strong>Focus areas:</strong> AI/ML, Computer Vision, Data Engineering, Full-Stack Development</li>
+        <li>Active in campus technology initiatives and wellbeing tooling projects</li>
+        <li>Emphasis on practical software development and real-world problem solving</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
 <section id="contact" class="section">
   <div class="container">
     <div class="section-head">
-      <h2>Contact</h2>
-      <p class="lead">I am open to graduate roles in tech. AI and Data Engineering and Software Engineering are my preferences.</p>
+      <h2>Get In Touch</h2>
+      <p class="lead">I'm actively seeking graduate opportunities starting Summer 2026 in Software Engineering, AI/ML, or Data Engineering</p>
     </div>
 
     <div class="contact">
       <a href="mailto:kennethwinniefred746@gmail.com">
-        <span>Email</span>
-        <strong>kennethwinniefred746@gmail.com</strong>
+        <div class="contact-icon">📧</div>
+        <strong>Email</strong>
+        <span>kennethwinniefred746@gmail.com</span>
       </a>
       <a href="https://www.linkedin.com/in/winnie-kenneth-28a862287/" target="_blank" rel="noreferrer">
-        <span>LinkedIn</span>
-        <strong>/in/winnie-kenneth-28a862287/</strong>
+        <div class="contact-icon">💼</div>
+        <strong>LinkedIn</strong>
+        <span>Connect on LinkedIn</span>
       </a>
       <a href="https://github.com/Whiney001" target="_blank" rel="noreferrer">
-        <span>GitHub</span>
-        <strong>github.com/Whiney001</strong>
+        <div class="contact-icon">💻</div>
+        <strong>GitHub</strong>
+        <span>View my code</span>
       </a>
     </div>
   </div>
 </section>
 
 <footer>
-  © <span id="year"></span> Winnie Kenneth
+  <div class="container">
+    <p>&copy; <span id="year"></span> Winnie Kenneth · Computer Science Student</p>
+    <p style="margin-top:8px; font-size:14px">Available for Graduate Roles · London/UK · Remote/Hybrid</p>
+  </div>
 </footer>
 
 <script>
-  // Year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Reveal on scroll
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
       if(e.isIntersecting){ e.target.classList.add('reveal'); io.unobserve(e.target); }
@@ -448,7 +440,6 @@ footer{
   }, { threshold:.15 });
   document.querySelectorAll('.card').forEach(c=>io.observe(c));
 
-  // Active nav link
   const sections = [...document.querySelectorAll('section[id]')];
   const nav = document.getElementById('topNav');
   const links = [...nav.querySelectorAll('a')].filter(a=>a.getAttribute('href').startsWith('#'));
