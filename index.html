@@ -142,7 +142,10 @@ h1{margin:.5rem 0 .35rem; font-size:clamp(30px,3.5vw,46px); line-height:1.1}
   width:56px; height:56px; border-radius:50%;
   background:linear-gradient(135deg,var(--accent),var(--accent2));
   display:flex; align-items:center; justify-content:center;
-  font-size:26px;
+  font-size:26px; color:#fff;
+}
+.contact-icon svg{
+  width:28px; height:28px; fill:#fff;
 }
 .contact strong{font-size:15px}
 .contact span{color:var(--muted); font-size:13px; text-align:center}
@@ -239,7 +242,7 @@ footer{
           <span class="chip">Python</span><span class="chip">MediaPipe</span><span class="chip">OpenCV</span><span class="chip">Computer Vision</span>
         </div>
         <div class="actions">
-          <a class="btn" href="https://github.com/Whiney001/GestureRobotProject" target="_blank" rel="noreferrer">View Repository →</a>
+          <a class="btn" href="https://github.com/Whiney001/gesture-control-robot-navigation" target="_blank" rel="noreferrer">View Repository →</a>
         </div>
       </article>
 
@@ -252,20 +255,7 @@ footer{
           <span class="chip">React</span><span class="chip">React Router</span><span class="chip">Recharts</span><span class="chip">JavaScript</span>
         </div>
         <div class="actions">
-          <a class="btn" href="https://github.com/Whiney001/StudentWellbeingReact" target="_blank" rel="noreferrer">View Repository →</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h3>EduConnect — Wellbeing Management System</h3>
-        <p class="small"><strong>Challenge:</strong> Build a lightweight system to log moods, book meetings and track reviews without full UI complexity.</p>
-        <p class="small"><strong>Solution:</strong> Created a menu-driven C# console application with role-based access for students, supervisors and senior tutors, with JSON persistence and CI/CD via GitHub Actions.</p>
-        <p class="small"><strong>Impact:</strong> Simple, testable, dependency-light architecture that logs engagement data and can migrate to a service layer when needed.</p>
-        <div class="meta">
-          <span class="chip">C#</span><span class="chip">.NET</span><span class="chip">JSON</span><span class="chip">GitHub Actions</span>
-        </div>
-        <div class="actions">
-          <a class="btn" href="https://github.com/Whiney001/EduConnect" target="_blank" rel="noreferrer">View Repository →</a>
+          <a class="btn" href="https://github.com/Whiney001/student-wellbeing-support-platform" target="_blank" rel="noreferrer">View Repository →</a>
         </div>
       </article>
 
@@ -278,7 +268,7 @@ footer{
           <span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">Pandas</span><span class="chip">Machine Learning</span>
         </div>
         <div class="actions">
-          <a class="btn" href="https://github.com/Whiney001/SmartCityDeliveryML" target="_blank" rel="noreferrer">View Repository →</a>
+          <a class="btn" href="https://github.com/Whiney001/smart-city-delivery-cost-optimization" target="_blank" rel="noreferrer">View Repository →</a>
         </div>
       </article>
 
@@ -291,7 +281,7 @@ footer{
           <span class="chip">Python</span><span class="chip">SQLite</span><span class="chip">SQL</span><span class="chip">Database Design</span>
         </div>
         <div class="actions">
-          <a class="btn" href="https://github.com/Whiney001/RestaurantDBSystem" target="_blank" rel="noreferrer">View Repository →</a>
+          <a class="btn" href="https://github.com/Whiney001/restaurant-database-management-system" target="_blank" rel="noreferrer">View Repository →</a>
         </div>
       </article>
 
@@ -361,19 +351,32 @@ footer{
   <div class="container">
     <div class="section-head">
       <h2>Experience</h2>
-      <p class="lead">Software development and technical projects</p>
+      <p class="lead">Technical projects and leadership</p>
     </div>
 
-    <div class="list-card">
-      <h3>Software Development Projects</h3>
-      <p class="when">2024 — Present · Hull / Remote</p>
-      <ul>
-        <li>Delivered computer vision and ML prototypes with reproducible pipelines and readme-level documentation</li>
-        <li>Implemented React front-ends with routing, state separation and component reuse patterns</li>
-        <li>Applied Git-based workflows (branches, PRs), CI via GitHub Actions and lightweight testing</li>
-        <li>Focused on clean architecture, readable code and outcomes that teams can extend</li>
-      </ul>
-      <p style="margin-top:12px"><strong>Technologies:</strong> Python · C# · React · OpenCV · MediaPipe · scikit-learn · SQLite · Git/GitHub</p>
+    <div style="display:grid; gap:18px">
+      <div class="list-card">
+        <h3>Women's Representative — School of Computer Science</h3>
+        <p class="when">University of Hull · October 2024 — Present</p>
+        <ul>
+          <li>Advocate for women in tech, organizing workshops and networking events to increase participation in computing</li>
+          <li>Lead peer mentoring initiatives connecting first-year students with senior mentors in software development</li>
+          <li>Coordinate with faculty to improve inclusivity in technical curriculum and project assignments</li>
+          <li>Host tech talks featuring women engineers from industry, promoting career pathways in software and data</li>
+        </ul>
+      </div>
+
+      <div class="list-card">
+        <h3>Software Development Projects</h3>
+        <p class="when">2024 — Present · Hull / Remote</p>
+        <ul>
+          <li>Delivered computer vision and ML prototypes with reproducible pipelines and readme-level documentation</li>
+          <li>Implemented React front-ends with routing, state separation and component reuse patterns</li>
+          <li>Applied Git-based workflows (branches, PRs), CI via GitHub Actions and lightweight testing</li>
+          <li>Focused on clean architecture, readable code and outcomes that teams can extend</li>
+        </ul>
+        <p style="margin-top:12px"><strong>Technologies:</strong> Python · C# · React · OpenCV · MediaPipe · scikit-learn · SQLite · Git/GitHub</p>
+      </div>
     </div>
   </div>
 </section>
@@ -386,7 +389,7 @@ footer{
 
     <div class="list-card">
       <h3>BSc (Hons) Computer Science</h3>
-      <p class="when">University of Hull · Graduating May 2026 · Predicted 2:1</p>
+      <p class="when">University of Hull · Graduating May 2026</p>
       <ul>
         <li><strong>Focus areas:</strong> AI/ML, Computer Vision, Data Engineering, Full-Stack Development</li>
         <li>Active in campus technology initiatives and wellbeing tooling projects</li>
@@ -405,17 +408,23 @@ footer{
 
     <div class="contact">
       <a href="mailto:kennethwinniefred746@gmail.com">
-        <div class="contact-icon">📧</div>
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </div>
         <strong>Email</strong>
         <span>kennethwinniefred746@gmail.com</span>
       </a>
       <a href="https://www.linkedin.com/in/winnie-kenneth-28a862287/" target="_blank" rel="noreferrer">
-        <div class="contact-icon">💼</div>
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </div>
         <strong>LinkedIn</strong>
         <span>Connect on LinkedIn</span>
       </a>
       <a href="https://github.com/Whiney001" target="_blank" rel="noreferrer">
-        <div class="contact-icon">💻</div>
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+        </div>
         <strong>GitHub</strong>
         <span>View my code</span>
       </a>
@@ -426,7 +435,7 @@ footer{
 <footer>
   <div class="container">
     <p>&copy; <span id="year"></span> Winnie Kenneth · Computer Science Student</p>
-    <p style="margin-top:8px; font-size:14px">Available for Graduate Roles · London/UK · Remote/Hybrid</p>
+    <p style="margin-top:8px; font-size:14px">Available for Graduate Roles · UK · Remote/Hybrid</p>
   </div>
 </footer>
 
